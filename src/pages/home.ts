@@ -571,36 +571,104 @@ const homeContent = `
 </section>
 
 <!-- ===== TEAM ===== -->
-<section style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;">
-  <div class="max-w-7xl mx-auto px-section">
+<section id="team" style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;overflow:hidden;">
+  <div class="orb" style="width:500px;height:500px;background:rgba(168,107,255,.04);bottom:-150px;left:-150px;"></div>
+  <div class="max-w-7xl mx-auto px-section" style="position:relative;z-index:1;">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#A86BFF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">CORE TEAM</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
         The <span class="gradient-text">Visionaries</span> Behind DaVinci AI
       </h2>
       <div class="section-divider"></div>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.4);margin-top:20px;max-width:520px;margin-left:auto;margin-right:auto;">
+        A world-class team of AI researchers, blockchain engineers, and creative visionaries.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 team-inner-grid">
+    <!-- Core 4 -->
+    <div class="team-inner-grid" style="margin-bottom:48px;">
       ${[
-        { name:'Leonardo Chen', role:'CEO & Co-Founder', bg:'#00D8FF', icon:'fas fa-crown', desc:'Former AI Research Lead at DeepMind. 10+ years building generative AI systems. Blockchain architect since 2017.', x:'@LeonardoChenAI' },
-        { name:'Aria Nakamoto', role:'CTO & Co-Founder', bg:'#A86BFF', icon:'fas fa-code', desc:'Ex-Ethereum core contributor. Solidity expert with 5 deployed DeFi protocols. Smart contract security specialist.', x:'@AriaNakamoto' },
-        { name:'Marcus Rivera', role:'Chief Creative Officer', bg:'#00D8FF', icon:'fas fa-palette', desc:'Award-winning digital artist. First NFT collection sold for $2.4M. Collaborator with Beeple and Pak.', x:'@MarcusRiveraArt' },
-        { name:'Yuki Tanaka', role:'Head of Partnerships', bg:'#A86BFF', icon:'fas fa-handshake', desc:'Built partnerships at Binance NFT and Opensea. Connected with 50+ VC funds and 200+ Web3 projects globally.', x:'@YukiTanakaWeb3' },
+        { name:'Leonardo Chen',  role:'CEO & Co-Founder',        bg:'#00D8FF', icon:'fas fa-crown',     skills:['AI Research','Strategy','Vision'],
+          desc:'Former AI Research Lead at DeepMind. 10+ years building generative AI systems. Blockchain architect since 2017.', x:'@LeonardoChenAI' },
+        { name:'Aria Nakamoto',  role:'CTO & Co-Founder',        bg:'#A86BFF', icon:'fas fa-code',      skills:['Solidity','DeFi','Security'],
+          desc:'Ex-Ethereum core contributor. Solidity expert with 5 deployed DeFi protocols. Smart contract security specialist.', x:'@AriaNakamoto' },
+        { name:'Marcus Rivera',  role:'Chief Creative Officer',  bg:'#00D8FF', icon:'fas fa-palette',   skills:['NFT Art','Generative AI','UX'],
+          desc:'Award-winning digital artist. First NFT collection sold for $2.4M. Long-time collaborator with Beeple and Pak.', x:'@MarcusRiveraArt' },
+        { name:'Yuki Tanaka',    role:'Head of Partnerships',    bg:'#A86BFF', icon:'fas fa-handshake', skills:['BD','VC Network','Web3'],
+          desc:'Built partnerships at Binance NFT and OpenSea. Connected with 50+ VC funds and 200+ Web3 projects globally.', x:'@YukiTanakaWeb3' },
       ].map(m=>`
-        <div class="card-glass fade-up" style="padding:28px;text-align:center;">
-          <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,${m.bg}22,${m.bg}44);border:2px solid ${m.bg}44;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
-            <i class="${m.icon}" style="font-size:1.8rem;color:${m.bg};"></i>
+        <div class="card-glass fade-up team-card" style="padding:32px 24px;text-align:center;position:relative;overflow:hidden;">
+          <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,${m.bg},${m.bg}66);"></div>
+          <!-- Avatar -->
+          <div style="position:relative;display:inline-block;margin-bottom:20px;">
+            <div style="width:88px;height:88px;border-radius:50%;background:linear-gradient(135deg,${m.bg}20,${m.bg}40);border:2px solid ${m.bg}50;display:flex;align-items:center;justify-content:center;">
+              <i class="${m.icon}" style="font-size:2rem;color:${m.bg};"></i>
+            </div>
+            <div style="position:absolute;bottom:2px;right:2px;width:18px;height:18px;border-radius:50%;background:#080C14;border:2px solid ${m.bg};display:flex;align-items:center;justify-content:center;">
+              <div style="width:7px;height:7px;border-radius:50%;background:${m.bg};"></div>
+            </div>
           </div>
-          <h3 style="font-weight:700;font-size:1rem;margin-bottom:4px;">${m.name}</h3>
-          <p style="font-size:.78rem;color:rgba(0,216,255,.7);margin-bottom:12px;">${m.role}</p>
-          <p style="font-size:.8rem;color:rgba(253,253,253,.5);line-height:1.65;margin-bottom:16px;">${m.desc}</p>
-          <a href="https://x.com/DaVinciAiZ" target="_blank" style="font-size:.78rem;color:rgba(255,255,255,.4);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">
-            <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:currentColor;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.259 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <!-- Info -->
+          <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:4px;">${m.name}</h3>
+          <p style="font-size:.78rem;color:${m.bg};font-weight:600;margin-bottom:14px;">${m.role}</p>
+          <!-- Skills -->
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin-bottom:14px;">
+            ${m.skills.map(s=>`<span style="font-size:.64rem;padding:2px 9px;border-radius:50px;background:${m.bg}12;color:${m.bg};border:1px solid ${m.bg}25;font-weight:600;">${s}</span>`).join('')}
+          </div>
+          <!-- Desc -->
+          <p style="font-size:.8rem;color:rgba(253,253,253,.48);line-height:1.7;margin-bottom:18px;">${m.desc}</p>
+          <!-- X link -->
+          <a href="https://x.com/DaVinciAiZ" target="_blank" style="font-size:.78rem;color:rgba(255,255,255,.35);text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:color .2s;" onmouseover="this.style.color='${m.bg}'" onmouseout="this.style.color='rgba(255,255,255,.35)'">
+            <svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:currentColor;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.259 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             ${m.x}
           </a>
         </div>
       `).join('')}
+    </div>
+
+    <!-- Extended Team -->
+    <div style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:28px;">
+        <span style="font-size:.72rem;color:rgba(255,255,255,.4);font-weight:600;letter-spacing:.1em;white-space:nowrap;">EXTENDED TEAM</span>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.07);"></div>
+      </div>
+      <div class="team-ext-grid">
+        ${[
+          { name:'James Park',     role:'Lead Smart Contract Dev',  bg:'#3DCFFF', icon:'fas fa-file-contract' },
+          { name:'Sofia Mendes',   role:'AI Model Engineer',         bg:'#D4A0FF', icon:'fas fa-microchip' },
+          { name:'Ryan O\'Brien',  role:'Head of Community',         bg:'#00D8FF', icon:'fas fa-users' },
+          { name:'Mei Lin',        role:'Product Designer',          bg:'#A86BFF', icon:'fas fa-pen-ruler' },
+          { name:'David Kwon',     role:'Backend Engineer',          bg:'#3DCFFF', icon:'fas fa-server' },
+          { name:'Lena Müller',    role:'Marketing Lead',            bg:'#D4A0FF', icon:'fas fa-bullhorn' },
+        ].map(m=>`
+          <div class="card-glass fade-up" style="padding:20px;display:flex;align-items:center;gap:14px;">
+            <div style="width:48px;height:48px;border-radius:14px;background:${m.bg}15;border:1px solid ${m.bg}30;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <i class="${m.icon}" style="font-size:1.1rem;color:${m.bg};"></i>
+            </div>
+            <div style="min-width:0;">
+              <div style="font-weight:700;font-size:.9rem;margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${m.name}</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.4);">${m.role}</div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Hiring CTA -->
+    <div class="text-center fade-up" style="padding:36px;background:rgba(168,107,255,.04);border:1px solid rgba(168,107,255,.12);border-radius:20px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(168,107,255,.1);border:1px solid rgba(168,107,255,.2);border-radius:50px;padding:6px 16px;margin-bottom:16px;">
+        <span style="width:7px;height:7px;background:#A86BFF;border-radius:50%;display:inline-block;animation:pulse-glow 2s infinite;"></span>
+        <span style="font-size:.72rem;color:#A86BFF;font-weight:700;letter-spacing:.08em;">WE'RE HIRING</span>
+      </div>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:10px;">
+        Join the <span class="gradient-text">DaVinci AI Team</span>
+      </h3>
+      <p style="font-size:.88rem;color:rgba(255,255,255,.4);max-width:460px;margin:0 auto 22px;line-height:1.7;">
+        Looking for passionate AI engineers, Web3 developers, and creative talent to build the future of AI-native creativity.
+      </p>
+      <a href="https://x.com/DaVinciAiZ" target="_blank" class="btn-primary" style="font-size:.9rem;padding:12px 30px;">
+        <i class="fas fa-paper-plane"></i> Apply on X / DM Us
+      </a>
     </div>
   </div>
 </section>
@@ -999,7 +1067,12 @@ export const homePage = layout('Home — DaVinci AI: AI Agent Creative Platform'
   /* ===== TEAM ===== */
   .team-inner-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
   @media(max-width:1023px){ .team-inner-grid { grid-template-columns:repeat(2,1fr); } }
-  @media(max-width:399px){ .team-inner-grid { grid-template-columns:1fr; } }
+  @media(max-width:399px) { .team-inner-grid { grid-template-columns:1fr; } }
+  .team-ext-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  @media(max-width:767px) { .team-ext-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:479px) { .team-ext-grid { grid-template-columns:1fr; } }
+  .team-card { transition:transform .25s, border-color .25s !important; }
+  .team-card:hover { transform:translateY(-4px) !important; }
 
   /* ===== PARTNERS ===== */
   .partner-grid { display:grid; grid-template-columns:repeat(8,1fr); gap:14px; }

@@ -61,6 +61,7 @@ export const layout = (title: string, content: string, extraHead = '') => `<!DOC
       <a href="/#ecosystem" class="nav-link">Ecosystem</a>
       <a href="/#tokenomics" class="nav-link">Tokenomics</a>
       <a href="/#roadmap" class="nav-link">Roadmap</a>
+      <a href="/#team" class="nav-link">Team</a>
       <a href="/whitepaper" class="nav-link">Whitepaper</a>
     </div>
     <div class="hidden md:flex items-center gap-3">
@@ -78,6 +79,8 @@ export const layout = (title: string, content: string, extraHead = '') => `<!DOC
     <a href="/#agents" class="nav-link"><i class="fas fa-robot" style="margin-right:6px;opacity:.6;"></i>AI Agents</a>
     <a href="/#ecosystem" class="nav-link"><i class="fas fa-layer-group" style="margin-right:6px;opacity:.6;"></i>Ecosystem</a>
     <a href="/#tokenomics" class="nav-link"><i class="fas fa-coins" style="margin-right:6px;opacity:.6;"></i>Tokenomics</a>
+    <a href="/#roadmap" class="nav-link"><i class="fas fa-map" style="margin-right:6px;opacity:.6;"></i>Roadmap</a>
+    <a href="/#team" class="nav-link"><i class="fas fa-users" style="margin-right:6px;opacity:.6;"></i>Team</a>
     <a href="/whitepaper" class="nav-link"><i class="fas fa-file-alt" style="margin-right:6px;opacity:.6;"></i>Whitepaper</a>
     <a href="/mypage" class="nav-link"><i class="fas fa-user-circle" style="margin-right:6px;opacity:.6;"></i>My Page</a>
     <a href="/login" class="btn-primary" style="justify-content:center;"><i class="fas fa-wallet"></i> Connect Wallet</a>
