@@ -8,8 +8,8 @@ const homeContent = `
   <div class="orb" style="width:800px;height:800px;background:rgba(0,216,255,.04);top:-300px;left:-300px;"></div>
   <div class="orb" style="width:700px;height:700px;background:rgba(168,107,255,.04);bottom:-200px;right:-200px;"></div>
 
-  <div class="max-w-7xl mx-auto px-6 py-20 w-full" style="position:relative;z-index:2;">
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <div class="max-w-7xl mx-auto px-section w-full" style="position:relative;z-index:2;padding-top:60px;padding-bottom:60px;">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
       <div>
         <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(0,216,255,.08);border:1px solid rgba(0,216,255,.2);border-radius:50px;padding:8px 20px;margin-bottom:28px;">
           <span style="width:8px;height:8px;background:#00D8FF;border-radius:50%;animation:pulse-glow 2s infinite;display:block;flex-shrink:0;"></span>
@@ -102,7 +102,7 @@ const homeContent = `
 
 <!-- ===== TRUST BAR ===== -->
 <section style="background:#05080F;padding:32px 0;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);">
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-section">
     <div style="display:flex;flex-wrap:wrap;gap:0;justify-content:center;align-items:center;">
       ${[
         {val:`${platformStats.totalAgents}+`, label:'Specialized AI Agents', icon:'fas fa-robot'},
@@ -123,9 +123,9 @@ const homeContent = `
 </section>
 
 <!-- ===== X TWITTER COMMUNITY ===== -->
-<section style="background:linear-gradient(135deg,#050810,#080C14);padding:80px 0;position:relative;overflow:hidden;">
+<section style="background:linear-gradient(135deg,#050810,#080C14);padding:clamp(48px,6vw,80px) 0;position:relative;overflow:hidden;">
   <div class="orb" style="width:400px;height:400px;background:rgba(0,216,255,.03);top:-100px;right:-100px;"></div>
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:48px;">
       <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:50px;padding:8px 20px;margin-bottom:20px;">
         <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#FDFDFD;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.259 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -176,9 +176,9 @@ const homeContent = `
 </section>
 
 <!-- ===== FEATURED AGENTS ===== -->
-<section id="agents" style="padding:100px 0;background:#080C14;position:relative;">
+<section id="agents" style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;">
   <div class="orb" style="width:600px;height:600px;background:rgba(168,107,255,.03);top:-100px;right:-200px;"></div>
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:56px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">AI AGENT MARKETPLACE</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -250,8 +250,8 @@ const homeContent = `
 </section>
 
 <!-- ===== HOW IT WORKS ===== -->
-<section style="padding:100px 0;background:#05080F;position:relative;">
-  <div class="max-w-7xl mx-auto px-6">
+<section style="padding:clamp(60px,8vw,100px) 0;background:#05080F;position:relative;">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#A86BFF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">SIMPLE AS 1-2-3</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -282,8 +282,8 @@ const homeContent = `
 </section>
 
 <!-- ===== ECOSYSTEM ===== -->
-<section id="ecosystem" style="padding:100px 0;background:#080C14;position:relative;">
-  <div class="max-w-7xl mx-auto px-6">
+<section id="ecosystem" style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">THE DAVINCI ECOSYSTEM</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -317,8 +317,8 @@ const homeContent = `
 </section>
 
 <!-- ===== ABOUT / FEATURES ===== -->
-<section id="about" style="padding:100px 0;background:#05080F;position:relative;">
-  <div class="max-w-7xl mx-auto px-6">
+<section id="about" style="padding:clamp(60px,8vw,100px) 0;background:#05080F;position:relative;">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">WHY DAVINCI AI</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -354,9 +354,9 @@ const homeContent = `
 </section>
 
 <!-- ===== TOKENOMICS ===== -->
-<section id="tokenomics" style="padding:100px 0;background:#080C14;position:relative;overflow:hidden;">
+<section id="tokenomics" style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;overflow:hidden;">
   <div class="orb" style="width:600px;height:600px;background:rgba(168,107,255,.04);top:-200px;right:-150px;"></div>
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#A86BFF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">$DAVINCI TOKEN</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -380,10 +380,10 @@ const homeContent = `
       `).join('')}
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12 items-center tokenomics-chart-wrap">
-      <div class="fade-up" style="display:flex;justify-content:center;">
-        <div style="position:relative;width:280px;height:280px;">
-          <canvas id="tokenomicsChart" width="280" height="280"></canvas>
+    <div class="tokenomics-chart-wrap">
+      <div class="fade-up chart-center-wrap">
+        <div style="position:relative;width:260px;height:260px;">
+          <canvas id="tokenomicsChart" width="260" height="260"></canvas>
           <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
             <div style="font-size:1.8rem;font-weight:800;color:#FDFDFD;">8.88B</div>
             <div style="font-size:.75rem;color:rgba(255,255,255,.4);">Total Supply</div>
@@ -515,9 +515,9 @@ const homeContent = `
 </section>
 
 <!-- ===== ROADMAP ===== -->
-<section id="roadmap" style="padding:100px 0;background:#05080F;position:relative;overflow:hidden;">
+<section id="roadmap" style="padding:clamp(60px,8vw,100px) 0;background:#05080F;position:relative;overflow:hidden;">
   <div class="orb" style="width:500px;height:500px;background:rgba(0,216,255,.03);bottom:-100px;left:-100px;"></div>
-  <div class="max-w-7xl mx-auto px-6">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">ROADMAP 2025–2027</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -536,7 +536,7 @@ const homeContent = `
           { phase:'Phase 4', period:'Q3–Q4 2026', status:'upcoming', title:'Multi-Chain & Scale', items:['Ethereum & Polygon bridge','3D & XR agents (Sculptor, Realm)','Layer 2 gas optimization','Creator Academy launch','100,000+ users milestone'] },
           { phase:'Phase 5', period:'2027+', status:'future', title:'The Renaissance Protocol', items:['Decentralized AI training platform','DaVinci L2 blockchain research','Cross-chain agent portability','AI DAO autonomous governance','1M+ creators onboarded'] },
         ].map((r,i)=>`
-          <div class="fade-up roadmap-item" style="display:grid;gap:16px;">
+          <div class="fade-up roadmap-item">
             <div class="roadmap-inner">
               <div style="background:rgba(255,255,255,.02);border:1px solid ${r.status==='completed'?'rgba(0,216,255,.3)':r.status==='current'?'rgba(168,107,255,.4)':'rgba(255,255,255,.08)'};border-radius:20px;padding:24px;position:relative;overflow:hidden;">
                 ${r.status==='current'?`<div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#A86BFF,#00D8FF);"></div>`:''}
@@ -557,7 +557,7 @@ const homeContent = `
                 </ul>
               </div>
             </div>
-            <div class="hidden lg:flex" style="${i%2===1?'direction:ltr;justify-content:flex-end;':'justify-content:flex-start;'}align-items:center;">
+            <div class="roadmap-phase-badge" style="display:flex;justify-content:${i%2===1?'flex-end':'flex-start'};align-items:center;">
               <div style="background:rgba(8,12,20,.9);border:2px solid ${r.status==='completed'?'#00D8FF':r.status==='current'?'#A86BFF':'rgba(255,255,255,.15)'};border-radius:16px;padding:20px 28px;text-align:center;min-width:160px;">
                 <div style="font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;color:${r.status==='completed'?'#00D8FF':r.status==='current'?'#A86BFF':'rgba(255,255,255,.3)'};">${r.phase}</div>
                 <div style="font-size:.75rem;color:rgba(255,255,255,.35);margin-top:4px;">${r.period}</div>
@@ -571,8 +571,8 @@ const homeContent = `
 </section>
 
 <!-- ===== TEAM ===== -->
-<section style="padding:100px 0;background:#080C14;position:relative;">
-  <div class="max-w-7xl mx-auto px-6">
+<section style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#A86BFF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">CORE TEAM</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -606,8 +606,8 @@ const homeContent = `
 </section>
 
 <!-- ===== PARTNERS ===== -->
-<section id="partners" style="padding:100px 0;background:#05080F;position:relative;">
-  <div class="max-w-7xl mx-auto px-6">
+<section id="partners" style="padding:clamp(60px,8vw,100px) 0;background:#05080F;position:relative;">
+  <div class="max-w-7xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">POWERED BY</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -639,8 +639,8 @@ const homeContent = `
 </section>
 
 <!-- ===== FAQ ===== -->
-<section style="padding:100px 0;background:#080C14;position:relative;">
-  <div class="max-w-3xl mx-auto px-6">
+<section style="padding:clamp(60px,8vw,100px) 0;background:#080C14;position:relative;">
+  <div class="max-w-3xl mx-auto px-section">
     <div class="text-center fade-up" style="margin-bottom:60px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">FREQUENTLY ASKED</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
@@ -674,10 +674,10 @@ const homeContent = `
 </section>
 
 <!-- ===== CTA ===== -->
-<section style="padding:100px 0;background:linear-gradient(135deg,#0B1525,#0F1C35);position:relative;overflow:hidden;">
+<section style="padding:clamp(60px,8vw,100px) 0;background:linear-gradient(135deg,#0B1525,#0F1C35);position:relative;overflow:hidden;">
   <div class="orb" style="width:600px;height:600px;background:rgba(0,216,255,.06);top:-200px;left:-200px;"></div>
   <div class="orb" style="width:600px;height:600px;background:rgba(168,107,255,.06);bottom:-200px;right:-200px;"></div>
-  <div class="max-w-4xl mx-auto px-6 text-center fade-up" style="position:relative;z-index:2;">
+  <div class="max-w-4xl mx-auto px-section text-center fade-up" style="position:relative;z-index:2;">
     <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:20px;">JOIN THE MOVEMENT</p>
     <h2 style="font-family:'Poppins',sans-serif;font-weight:900;font-size:clamp(2.5rem,5vw,4rem);line-height:1.1;margin-bottom:24px;">
       Be Part of the<br><span class="gradient-text">Creative Revolution</span>
@@ -822,95 +822,118 @@ export const homePage = layout('Home — DaVinci AI: AI Agent Creative Platform'
 <meta property="og:title" content="DaVinci AI — AI Agent Studio">
 <meta property="og:description" content="15+ AI agents. Generate art, video, music, code & NFTs. Earn $DAVINCI tokens on BNB Chain.">
 <style>
+  /* ===== ANIMATIONS ===== */
   @keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-  @keyframes float-card {
-    0%,100%{ transform:translateY(0px); }
-    50%{ transform:translateY(-10px); }
-  }
-  .fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s, transform .7s; }
+  @keyframes float-card { 0%,100%{transform:translateY(0px)} 50%{transform:translateY(-10px)} }
+
+  /* ===== FADE-UP ===== */
+  .fade-up { opacity:0; transform:translateY(24px); transition:opacity .6s ease, transform .6s ease; }
   .fade-up.visible { opacity:1; transform:translateY(0); }
 
-  /* ====== GLOBAL MOBILE FIX ====== */
-  * { box-sizing:border-box; }
-  html, body { overflow-x:hidden; max-width:100%; }
+  /* ===== GLOBAL RESET ===== */
+  *, *::before, *::after { box-sizing:border-box; }
+  html { overflow-x:hidden; }
+  body { overflow-x:hidden; width:100%; }
+  img, video, canvas, svg, iframe { max-width:100%; height:auto; }
 
-  /* ====== HERO ====== */
+  /* ===== CONTAINERS ===== */
+  .max-w-7xl { width:100%; max-width:80rem; margin-left:auto; margin-right:auto; }
+
+  /* ===== HERO ===== */
   @media(max-width:1023px){
     .hero-agent-visual { display:none !important; }
+    .hero-grid { grid-template-columns:1fr !important; }
   }
   @media(max-width:767px){
-    .hero-cta-wrap { flex-direction:column !important; align-items:stretch !important; }
-    .hero-cta-wrap a { text-align:center; justify-content:center !important; }
+    .hero-cta-wrap { flex-direction:column !important; align-items:stretch !important; gap:12px !important; }
+    .hero-cta-wrap a,
+    .hero-cta-wrap button { text-align:center !important; justify-content:center !important; width:100% !important; }
   }
 
-  /* ====== TRUST BAR ====== */
+  /* ===== STATS ROW ===== */
+  .stats-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  @media(max-width:767px){ .stats-row { grid-template-columns:repeat(2,1fr); } }
+
+  /* ===== TRUST BAR ===== */
+  .trust-bar-inner { display:grid; grid-template-columns:repeat(6,1fr); gap:0; }
+  @media(max-width:1023px){ .trust-bar-inner { grid-template-columns:repeat(3,1fr); } }
+  @media(max-width:479px){ .trust-bar-inner { grid-template-columns:repeat(2,1fr); } }
+  .trust-bar-item { padding:20px 12px; text-align:center; border-right:1px solid rgba(255,255,255,.05); }
+  .trust-bar-item:last-child, .trust-bar-item:nth-child(3n):is(.trust-bar-inner:not(.six-col) *) { border-right:none; }
+  @media(max-width:1023px){ .trust-bar-item:nth-child(3n) { border-right:none; } }
+  @media(max-width:479px){ .trust-bar-item:nth-child(2n) { border-right:none; } .trust-bar-item:nth-child(3n) { border-right:1px solid rgba(255,255,255,.05); } }
+
+  /* ===== AGENT FILTER ===== */
+  .agent-filter-wrap { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; }
   @media(max-width:639px){
-    .trust-bar-item { min-width:calc(33.333% - 8px) !important; border-right:none !important; padding:14px 8px !important; }
+    .agent-filter-wrap { flex-wrap:nowrap; overflow-x:auto; justify-content:flex-start; padding-bottom:8px; -webkit-overflow-scrolling:touch; }
+    .agent-filter-wrap button { flex-shrink:0; white-space:nowrap; }
   }
 
-  /* ====== TOKENOMICS CHART ====== */
-  @media(max-width:767px){
-    .tokenomics-chart-wrap { flex-direction:column !important; align-items:center !important; }
-    .tokenomics-legend { width:100% !important; max-width:100% !important; }
-    #tokenomicsChart { width:220px !important; height:220px !important; }
+  /* ===== AGENT GRID ===== */
+  .agent-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media(max-width:1023px){ .agent-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:639px){ .agent-grid { grid-template-columns:1fr; } }
+
+  /* ===== HOW IT WORKS ===== */
+  .how-it-works-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:32px; }
+  @media(max-width:767px){ .how-it-works-grid { grid-template-columns:1fr; } }
+
+  /* ===== ECOSYSTEM ===== */
+  .ecosystem-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  @media(max-width:1023px){ .ecosystem-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:479px){ .ecosystem-grid { grid-template-columns:1fr; } }
+
+  /* ===== ABOUT / FEATURES ===== */
+  .about-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+  @media(max-width:1023px){ .about-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:479px){ .about-grid { grid-template-columns:1fr; } }
+
+  /* ===== TOKENOMICS ===== */
+  .tokenomics-key-items { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  @media(max-width:767px){ .tokenomics-key-items { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:399px){ .tokenomics-key-items { grid-template-columns:1fr; } }
+
+  .tokenomics-chart-wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+  @media(max-width:767px){ .tokenomics-chart-wrap { grid-template-columns:1fr; gap:32px; } }
+
+  .chart-center-wrap { display:flex; justify-content:center; }
+  @media(max-width:767px){ .chart-center-wrap canvas { width:200px !important; height:200px !important; } }
+
+  /* ===== VESTING TABLE ===== */
+  .vesting-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:12px; border:1px solid rgba(255,255,255,.07); }
+  .vesting-scroll table { min-width:680px; width:100%; border-collapse:collapse; font-size:.78rem; }
+
+  /* ===== ROADMAP ===== */
+  .roadmap-item { display:grid; grid-template-columns:1fr 200px; gap:20px; align-items:center; }
+  @media(max-width:1023px){ .roadmap-item { grid-template-columns:1fr !important; } .roadmap-phase-badge { display:none !important; } }
+
+  /* ===== TWITTER GRID ===== */
+  .twitter-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  @media(max-width:767px){ .twitter-grid { grid-template-columns:1fr; } }
+
+  /* ===== TEAM ===== */
+  .team-inner-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  @media(max-width:1023px){ .team-inner-grid { grid-template-columns:repeat(2,1fr); } }
+  @media(max-width:399px){ .team-inner-grid { grid-template-columns:1fr; } }
+
+  /* ===== PARTNERS ===== */
+  .partner-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:16px; }
+  @media(max-width:1023px){ .partner-grid { grid-template-columns:repeat(4,1fr); } }
+  @media(max-width:479px){ .partner-grid { grid-template-columns:repeat(3,1fr); gap:10px; } }
+
+  /* ===== CTA ===== */
+  .cta-btn-wrap { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
+  @media(max-width:479px){
+    .cta-btn-wrap { flex-direction:column; align-items:stretch; }
+    .cta-btn-wrap a { text-align:center !important; justify-content:center !important; width:100% !important; }
   }
 
-  /* ====== VESTING TABLE ====== */
-  .vesting-monthly-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
-  .vesting-monthly-wrap table { min-width:700px; }
-
-  /* ====== ROADMAP ALTERNATING ====== */
-  @media(max-width:1023px){
-    .roadmap-item { direction:ltr !important; }
-    .roadmap-inner { direction:ltr !important; }
-  }
-
-  /* ====== TEAM CARDS ====== */
-  @media(max-width:639px){
-    .team-grid { grid-template-columns:1fr 1fr !important; }
-  }
-  @media(max-width:400px){
-    .team-grid { grid-template-columns:1fr !important; }
-  }
-
-  /* ====== PARTNER GRID ====== */
-  @media(max-width:639px){
-    .partner-grid { grid-template-columns:repeat(3,1fr) !important; gap:12px !important; }
-  }
-
-  /* ====== FAQ ====== */
-  @media(max-width:639px){
-    .faq-item { padding:16px !important; }
-  }
-
-  /* ====== AGENT FILTER BUTTONS ====== */
-  #agentFilters { overflow-x:auto; flex-wrap:nowrap !important; padding-bottom:8px; -webkit-overflow-scrolling:touch; justify-content:flex-start !important; }
-  @media(min-width:640px){
-    #agentFilters { flex-wrap:wrap !important; justify-content:center !important; }
-  }
-  #agentFilters button { flex-shrink:0; white-space:nowrap; }
-
-  /* ====== PREVENT FIXED-WIDTH OVERFLOW ====== */
-  @media(max-width:767px){
-    [style*="min-width:700px"], [style*="min-width:720px"], [style*="min-width:750px"] {
-      /* overridden per-element with wrapper */
-    }
-    .stats-row { grid-template-columns:1fr 1fr !important; }
-    .how-it-works-grid { grid-template-columns:1fr !important; }
-    .ecosystem-grid { grid-template-columns:1fr 1fr !important; }
-    .about-grid { grid-template-columns:1fr 1fr !important; }
-    .twitter-grid { grid-template-columns:1fr !important; }
-    .agent-grid { grid-template-columns:1fr !important; }
-    .tokenomics-key-items { grid-template-columns:1fr 1fr !important; }
-    .roadmap-grid { grid-template-columns:1fr !important; }
-    .team-inner-grid { grid-template-columns:1fr 1fr !important; }
-    .cta-inner { padding:40px 20px !important; }
-    .section-inner-px { padding-left:16px !important; padding-right:16px !important; }
-  }
-  @media(max-width:480px){
-    .ecosystem-grid { grid-template-columns:1fr !important; }
-    .about-grid { grid-template-columns:1fr !important; }
-    .tokenomics-key-items { grid-template-columns:1fr !important; }
-  }
+  /* ===== SECTION PADDING ===== */
+  .section-pad { padding:clamp(48px,6vw,80px) 0; }
+  @media(max-width:767px){ .section-pad { padding:60px 0; } }
+  .section-pad-sm { padding:32px 0; }
+  .px-section { padding-left:24px; padding-right:24px; }
+  @media(max-width:767px){ .px-section { padding-left:16px; padding-right:16px; } }
 </style>
 `)
