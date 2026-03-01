@@ -100,38 +100,6 @@ const homeContent = `
   </div>
 </section>
 
-<!-- ===== BRAND ASSETS DOWNLOAD ===== -->
-<section style="padding:16px 0;background:rgba(0,216,255,0.03);border-bottom:1px solid rgba(0,216,255,0.1);">
-  <div class="max-w-7xl mx-auto px-section">
-    <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <img src="/static/logo-icon.svg" alt="DaVinci AI Logo" style="width:30px;height:30px;border-radius:8px;"/>
-        <div>
-          <div style="font-size:11px;font-weight:700;background:linear-gradient(135deg,#00D8FF,#A86BFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-transform:uppercase;letter-spacing:1.5px;">Brand Assets</div>
-          <div style="font-size:10px;color:rgba(253,253,253,0.4);">Official logo kit — SVG format</div>
-        </div>
-      </div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/static/logo-square.svg" download="davinci-ai-logo-square.svg"
-           style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#00D8FF;border:1px solid rgba(0,216,255,0.3);border-radius:6px;padding:6px 12px;text-decoration:none;transition:all 0.2s;background:rgba(0,216,255,0.04);"
-           onmouseover="this.style.background='rgba(0,216,255,0.12)'" onmouseout="this.style.background='rgba(0,216,255,0.04)'">
-          <i class="fas fa-download" style="font-size:10px;"></i> 1:1 Square
-        </a>
-        <a href="/static/logo-horizontal.svg" download="davinci-ai-logo-horizontal.svg"
-           style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#00D8FF;border:1px solid rgba(0,216,255,0.3);border-radius:6px;padding:6px 12px;text-decoration:none;transition:all 0.2s;background:rgba(0,216,255,0.04);"
-           onmouseover="this.style.background='rgba(0,216,255,0.12)'" onmouseout="this.style.background='rgba(0,216,255,0.04)'">
-          <i class="fas fa-download" style="font-size:10px;"></i> Horizontal
-        </a>
-        <a href="/static/logo-icon.svg" download="davinci-ai-logo-icon.svg"
-           style="display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:600;color:#00D8FF;border:1px solid rgba(0,216,255,0.3);border-radius:6px;padding:6px 12px;text-decoration:none;transition:all 0.2s;background:rgba(0,216,255,0.04);"
-           onmouseover="this.style.background='rgba(0,216,255,0.12)'" onmouseout="this.style.background='rgba(0,216,255,0.04)'">
-          <i class="fas fa-download" style="font-size:10px;"></i> Icon
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ===== TRUST BAR ===== -->
 <section style="background:#05080F;padding:32px 0;border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04);">
   <div class="max-w-7xl mx-auto px-section">
