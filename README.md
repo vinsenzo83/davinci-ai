@@ -7,55 +7,60 @@
 
 ## 🌐 Live URLs
 
-| Environment | URL |
-|---|---|
-| **Sandbox (Dev)** | https://4000-ifclimfdh50ocesbammad-cbeee0f9.sandbox.novita.ai |
-| **GitHub** | https://github.com/vinsenzo83/davinci-ai |
-| **Twitter / X** | https://x.com/DaVinciAiZ |
-| **Telegram** | https://t.me/DaVinciAiZ |
+| Environment | URL | Status |
+|---|---|---|
+| **Production** | https://davinciai.io | ✅ Live |
+| **Production (www)** | https://www.davinciai.io | ✅ Live |
+| **Cloudflare Pages** | https://davinci-ai.pages.dev | ✅ Live |
+| **GitHub** | https://github.com/vinsenzo83/davinci-ai | ✅ Public |
+| **Twitter / X** | https://x.com/DaVinciAiZ | ✅ Active |
+| **Telegram** | https://t.me/DaVinciAiZ | ✅ Active |
 
 ---
 
 ## 🎯 Project Overview
 
-**DaVinci AI** is a Web3-native AI agent creative platform built on **BNB Chain**. Users access 15+ specialized AI agents for art, video, music, writing, code, and NFT generation — all integrated into a single platform, rewarded with `$DAVINCI` tokens.
+**DaVinci AI** is a Web3-native AI agent creative platform built on **BNB Chain**.  
+Users access 15+ specialized AI agents for art, video, music, writing, code, and NFT generation — all integrated into one platform, rewarded with `$DAVINCI` tokens.
 
-### Core Concept
-- **AI Agent Studio** — 15+ purpose-built AI agents, each optimized for its domain
-- **NFT Marketplace** — Mint, trade, and collect AI-generated NFTs on BNB Chain
-- **Creator Game Hub** — AI art battles, leaderboards, and `$DAVINCI` prize pools
-- **DAO Governance** — Token holders vote on new agents, treasury, and platform direction
+### Core Pillars
+| Pillar | Description |
+|---|---|
+| 🤖 **AI Agent Studio** | 15+ purpose-built AI agents across 8 categories |
+| 💎 **NFT Marketplace** | Mint, trade & collect AI-generated NFTs on BNB Chain |
+| 🎮 **Creator Game Hub** | AI art battles, leaderboards, `$DAVINCI` prize pools |
+| 🏛️ **DAO Governance** | Token holders vote on agents, treasury, platform direction |
 
 ---
 
 ## ✅ Completed Features
 
-### Pages
+### Pages (7 total)
 | Page | Route | Status |
 |---|---|---|
-| Home (Landing) | `/` | ✅ Live |
+| Home Landing | `/` | ✅ Live |
 | AI Agents Marketplace | `/agents` | ✅ Live |
 | AI Image Studio | `/create/image` | ✅ Live |
 | AI Video Lab | `/create/video` | ✅ Live |
 | Whitepaper | `/whitepaper` | ✅ Live |
 | My Page | `/mypage` | ✅ Live |
-| Login / Wallet | `/login` | ✅ Live |
+| Login / Wallet Connect | `/login` | ✅ Live |
 
-### Homepage Sections (13 sections)
-| # | Section | ID |
+### Homepage Sections (14 total)
+| # | Section | Anchor |
 |---|---|---|
 | 1 | Hero — AI Agent Studio | — |
-| 2 | Trust Bar — Platform Stats | — |
-| 3 | X/Twitter Community | — |
-| 4 | Featured AI Agents | `#agents` |
-| 5 | How It Works | — |
+| 2 | Trust Bar — Live Platform Stats | — |
+| 3 | X/Twitter Community Feed | — |
+| 4 | Featured AI Agents + Category Filter | `#agents` |
+| 5 | How It Works (3 steps) | — |
 | 6 | Ecosystem — Four Pillars | `#ecosystem` |
 | 7 | About / Features (9 cards) | `#about` |
 | 8 | Tokenomics & Value Architecture | `#tokenomics` |
 | 9 | Vesting Schedule + Monthly Table | — |
 | 10 | Roadmap 2025–2027 | `#roadmap` |
-| 11 | Core Team + Extended Team | `#team` |
-| 12 | Partners (24 partners, 3 categories) | `#partners` |
+| 11 | Core Team + Extended Team + Hiring CTA | `#team` |
+| 12 | Partners — 24 partners, 3 categories | `#partners` |
 | 13 | FAQ (7 items) | — |
 | 14 | CTA — Creative Revolution | — |
 
@@ -71,35 +76,44 @@
 | **TGE Date** | Q4 2025 |
 | **DEX Listing** | PancakeSwap |
 
-### Token Allocation
+### Token Allocation & Vesting
 
 | Allocation | % | Amount | TGE Unlock | Cliff | Vesting |
 |---|---|---|---|---|---|
-| Community Rewards | 45% | 4,000,000,000 | 5% | 3 months | 60 months |
-| Strategic Investors | 15% | 1,333,333,333 | 10% | 9 months | 36 months |
-| Ecosystem & Marketing | 13% | 1,155,555,555 | 8% | 6 months | 42 months |
-| Team & Core Dev | 12% | 1,066,666,666 | 0% | 18 months | 48 months |
-| Treasury & Foundation | 10% | 888,888,888 | 0% | 12 months | 60 months |
-| Artist Fund | 5% | 444,444,444 | 10% | 0 months | 36 months |
+| Community Rewards | 45% | 4,000,000,000 | 5% | 3 months | 60 months (5 years) |
+| Strategic Investors | 15% | 1,333,333,333 | 10% | 9 months | 36 months (3 years) |
+| Ecosystem & Marketing | 13% | 1,155,555,555 | 8% | 6 months | 42 months (3.5 years) |
+| Team & Core Dev | 12% | 1,066,666,666 | 0% | 18 months | 48 months (4 years) |
+| Treasury & Foundation | 10% | 888,888,888 | 0% | 12 months | 60 months (5 years) |
+| Artist Fund | 5% | 444,444,444 | 10% | 0 months | 36 months (3 years) |
 
 ---
 
 ## 🤝 Partners (24 total)
 
-### AI Models
-OpenAI · Midjourney · Stable Diffusion · Runway ML · KlingAI · HeyGen · Suno · ElevenLabs
+### 🤖 AI Models (8)
+| Partner | Integration |
+|---|---|
+| OpenAI | GPT-4o · DALL-E 3 |
+| Midjourney | Image Gen v6 |
+| Stable Diffusion | SDXL · SD3 |
+| Runway ML | Video Gen-3 Alpha |
+| KlingAI | Video v1.6 Pro |
+| HeyGen | Avatar AI v2 |
+| Suno | Music Gen v4 |
+| ElevenLabs | Voice AI |
 
-### Web3 & Infrastructure
+### ⛓️ Web3 & Infrastructure (8)
 BNB Chain · PancakeSwap · OpenSea · Chainlink · IPFS · MetaMask · WalletConnect · Etherscan
 
-### Creative Tools
+### 🎨 Creative Tools (8)
 Wrtn.AI · Replicate · Hugging Face · Anthropic · LangChain · Pinecone · AWS · Cloudflare
 
 ---
 
 ## 👥 Team
 
-### Core Team
+### Core Team (4)
 | Name | Role |
 |---|---|
 | Leonardo Chen | CEO & Co-Founder |
@@ -107,14 +121,21 @@ Wrtn.AI · Replicate · Hugging Face · Anthropic · LangChain · Pinecone · AW
 | Marcus Rivera | Chief Creative Officer |
 | Yuki Tanaka | Head of Partnerships |
 
-### Extended Team
-James Park (Smart Contract) · Sofia Mendes (AI Engineer) · Ryan O'Brien (Community) · Mei Lin (Product Design) · David Kwon (Backend) · Lena Müller (Marketing)
+### Extended Team (6)
+| Name | Role |
+|---|---|
+| James Park | Lead Smart Contract Dev |
+| Sofia Mendes | AI Model Engineer |
+| Ryan O'Brien | Head of Community |
+| Mei Lin | Product Designer |
+| David Kwon | Backend Engineer |
+| Lena Müller | Marketing Lead |
 
 ---
 
 ## 🗺️ Roadmap
 
-| Phase | Period | Status | Milestone |
+| Phase | Period | Status | Title |
 |---|---|---|---|
 | Phase 1 | Q1–Q2 2025 | ✅ Completed | Genesis & Foundation |
 | Phase 2 | Q3–Q4 2025 | 🔄 In Progress | Agent Platform Launch & TGE |
@@ -130,38 +151,40 @@ James Park (Smart Contract) · Sofia Mendes (AI Engineer) · Ryan O'Brien (Commu
 |---|---|
 | **Runtime** | Cloudflare Pages + Workers (Edge) |
 | **Framework** | Hono v4 (TypeScript) |
-| **Frontend** | Vanilla HTML/CSS/JS · Tailwind CDN |
-| **Charts** | Chart.js (Tokenomics Doughnut + Vesting Line) |
-| **Icons** | FontAwesome 6.4 |
+| **Frontend** | Vanilla HTML/CSS/JS + Tailwind CDN |
+| **Charts** | Chart.js (Doughnut + Line) |
+| **Icons** | FontAwesome 6.4 CDN |
 | **Fonts** | Space Grotesk · Poppins (Google Fonts) |
-| **Build** | Vite v6 + @hono/vite-cloudflare-pages |
-| **Deploy** | Wrangler v4 (Cloudflare Pages) |
-| **CI/CD** | GitHub → Cloudflare Pages |
+| **Build Tool** | Vite v6 + @hono/vite-cloudflare-pages |
+| **Deploy** | Wrangler v4 → Cloudflare Pages |
+| **Domain** | davinciai.io (Namecheap → Cloudflare Pages) |
+| **SSL** | Cloudflare Auto TLS (Google CA) |
+| **Version Control** | GitHub (vinsenzo83/davinci-ai) |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-davinci-web/
+davinci-ai/
 ├── src/
-│   ├── index.tsx              # Hono app entry — all routes
+│   ├── index.tsx              # Hono app — all routes
 │   ├── pages/
 │   │   ├── layout.ts          # Global HTML shell (navbar, footer, CSS)
-│   │   ├── home.ts            # Homepage (13 sections, ~1100 lines)
-│   │   ├── whitepaper.ts      # Full whitepaper page
+│   │   ├── home.ts            # Homepage (14 sections, ~1100 lines)
+│   │   ├── whitepaper.ts      # Full whitepaper
 │   │   ├── create-image.ts    # AI Image Studio
 │   │   ├── create-video.ts    # AI Video Lab
 │   │   ├── mypage.ts          # User dashboard
 │   │   └── login.ts           # Wallet connect
 │   └── data/
-│       ├── agent-data.ts      # 15 AI agent definitions + platform stats
-│       └── gallery-data.ts    # Sample gallery data
+│       ├── agent-data.ts      # 15 AI agents + platform stats
+│       └── gallery-data.ts    # Gallery data
 ├── public/
 │   └── static/                # Static assets
-├── dist/                      # Build output (Cloudflare Pages)
-├── ecosystem.config.cjs       # PM2 config (sandbox dev)
-├── wrangler.jsonc             # Cloudflare Workers config
+├── dist/                      # Build output → Cloudflare Pages
+├── ecosystem.config.cjs       # PM2 (local sandbox dev)
+├── wrangler.jsonc             # Cloudflare config
 ├── vite.config.ts             # Vite build config
 └── package.json
 ```
@@ -174,36 +197,37 @@ davinci-web/
 - Node.js 18+
 - npm 9+
 
-### Local Setup
+### Setup
 ```bash
 git clone https://github.com/vinsenzo83/davinci-ai.git
 cd davinci-ai
 npm install
-npm run build
 ```
 
-### Run Dev Server (Sandbox / PM2)
+### Local Dev (Sandbox / PM2)
 ```bash
+npm run build
 pm2 start ecosystem.config.cjs
 # → http://localhost:4000
 ```
 
-### Run Dev Server (Local Machine)
+### Local Dev (로컬 머신)
 ```bash
 npm run dev
 # → http://localhost:5173
 ```
 
-### Build for Production
+### Build
 ```bash
 npm run build
 # → dist/_worker.js (~292 kB)
 ```
 
-### Deploy to Cloudflare Pages
+### Deploy to Production
 ```bash
+# CLOUDFLARE_API_TOKEN 환경변수 필요
 npm run deploy
-# Requires CLOUDFLARE_API_TOKEN
+# → https://davinciai.io
 ```
 
 ---
@@ -212,35 +236,41 @@ npm run deploy
 
 | Breakpoint | Width | Layout |
 |---|---|---|
-| Mobile S | < 400px | Single column, stacked buttons |
-| Mobile | 400–639px | 2-column grids |
-| Tablet | 640–1023px | 2–3 column grids |
-| Desktop | 1024px+ | Full multi-column layout |
+| Mobile S | < 400px | 1열, 버튼 세로 스택 |
+| Mobile | 400–639px | 2열 그리드 |
+| Tablet | 640–1023px | 2–3열 그리드 |
+| Desktop | 1024px+ | 풀 멀티컬럼 |
 
-All sections use CSS Grid with `clamp()` padding — no horizontal scroll on any viewport.
+모든 섹션 CSS Grid + `clamp()` 패딩 적용 — 모든 뷰포트에서 가로 스크롤 없음.
 
 ---
 
-## 🔧 Key Design Decisions
+## ☁️ Deployment Info
 
-- **No Node.js APIs** — Pure Cloudflare Workers runtime (Web APIs only)
-- **No heavy bundling** — CDN-loaded Tailwind, Chart.js, FontAwesome
-- **Inline HTML templates** — TypeScript template literals for SSR-like rendering
-- **CSS class-based responsive** — No inline Tailwind breakpoints (avoids CDN class conflicts)
-- **Single `layout.ts` footer** — Prevents duplicate footer bug
+| Item | Value |
+|---|---|
+| **Platform** | Cloudflare Pages |
+| **Project Name** | davinci-ai |
+| **Production Branch** | main |
+| **Build Command** | `npm run build` |
+| **Output Directory** | `dist` |
+| **Custom Domain** | davinciai.io |
+| **SSL** | Auto (Cloudflare + Google CA) |
+| **CDN** | Cloudflare Global Edge (200+ PoP) |
 
 ---
 
 ## ⏳ Planned / Not Yet Implemented
 
-- [ ] Real wallet connect (MetaMask / WalletConnect integration)
+- [ ] Real wallet connect (MetaMask / WalletConnect)
 - [ ] Actual AI agent API calls (currently UI mockup)
-- [ ] Real NFT minting flow (BNB Chain smart contract)
+- [ ] NFT minting flow (BNB Chain smart contract)
 - [ ] DAO governance on-chain voting
-- [ ] User authentication & dashboard data
+- [ ] User authentication & dashboard
 - [ ] Mobile app (React Native — Phase 3)
-- [ ] Multi-language support (EN/KO/ZH/JA)
+- [ ] Multi-language (EN/KO/ZH/JA)
 - [ ] Real-time community stats via API
+- [ ] GitHub Actions CI/CD auto-deploy
 
 ---
 
@@ -251,4 +281,4 @@ All sections use CSS Grid with `clamp()` padding — no horizontal scroll on any
 
 ---
 
-*Last updated: 2026-03-01 | Version: 3.5.0*
+*Last updated: 2026-03-01 | Version: 3.5.0 | Status: ✅ Production Live*
