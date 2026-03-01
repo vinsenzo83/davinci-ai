@@ -8,8 +8,8 @@ const homeContent = `
   <div class="orb" style="width:800px;height:800px;background:rgba(0,216,255,.04);top:-300px;left:-300px;"></div>
   <div class="orb" style="width:700px;height:700px;background:rgba(168,107,255,.04);bottom:-200px;right:-200px;"></div>
 
-  <div class="max-w-7xl mx-auto px-6 py-28 w-full" style="position:relative;z-index:2;">
-    <div class="grid lg:grid-cols-2 gap-16 items-center">
+  <div class="max-w-7xl mx-auto px-6 py-20 w-full" style="position:relative;z-index:2;">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
       <div>
         <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(0,216,255,.08);border:1px solid rgba(0,216,255,.2);border-radius:50px;padding:8px 20px;margin-bottom:28px;">
           <span style="width:8px;height:8px;background:#00D8FF;border-radius:50%;animation:pulse-glow 2s infinite;display:block;flex-shrink:0;"></span>
@@ -24,7 +24,7 @@ const homeContent = `
           Access ${platformStats.totalAgents}+ specialized AI agents for art, video, music, writing, code, and Web3. Each agent is powered by state-of-the-art models — all integrated in one platform, rewarded with $DAVINCI tokens.
         </p>
 
-        <div class="flex flex-wrap gap-4 mb-12">
+        <div class="flex flex-wrap gap-3 mb-10 hero-cta-wrap">
           <a href="/agents" class="btn-primary" style="font-size:1rem;padding:15px 32px;"><i class="fas fa-robot"></i> Explore Agents</a>
           <a href="/whitepaper" class="btn-outline" style="font-size:1rem;padding:14px 32px;"><i class="fas fa-file-alt"></i> Whitepaper</a>
           <a href="https://x.com/DaVinciAiZ" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:50px;padding:14px 28px;font-size:.95rem;font-weight:600;color:#FDFDFD;text-decoration:none;transition:all .3s;" onmouseover="this.style.background='rgba(255,255,255,.12)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
@@ -34,7 +34,7 @@ const homeContent = `
         </div>
 
         <!-- Stats Row -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 stats-row">
           <div style="background:rgba(0,216,255,.05);border:1px solid rgba(0,216,255,.12);border-radius:12px;padding:16px;text-align:center;">
             <div style="font-size:1.4rem;font-weight:800;color:#00D8FF;">${platformStats.totalAgents}+</div>
             <div style="font-size:.68rem;color:rgba(255,255,255,.4);margin-top:3px;">AI Agents</div>
@@ -55,7 +55,7 @@ const homeContent = `
       </div>
 
       <!-- Hero Visual: Agent Cards floating -->
-      <div style="position:relative;display:flex;justify-content:center;align-items:center;min-height:460px;">
+      <div class="hero-agent-visual" style="position:relative;display:flex;justify-content:center;align-items:center;min-height:460px;">
         <!-- background rings -->
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:420px;height:420px;border-radius:50%;border:1px solid rgba(0,216,255,.06);animation:spin 25s linear infinite;"></div>
         <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:340px;height:340px;border-radius:50%;border:1px solid rgba(168,107,255,.08);animation:spin 18s linear infinite reverse;"></div>
@@ -112,7 +112,7 @@ const homeContent = `
         {val:'BEP-20',                         label:'BNB Chain Native',       icon:'fas fa-link'},
         {val:'8.88B',                          label:'$DAVINCI Supply',        icon:'fas fa-coins'},
       ].map((s,i)=>`
-        <div style="flex:1;min-width:140px;padding:20px;text-align:center;border-right:${i<5?'1px solid rgba(255,255,255,.05)':'none'};">
+        <div class="trust-bar-item" style="flex:1;min-width:140px;padding:20px;text-align:center;border-right:${i<5?'1px solid rgba(255,255,255,.05)':'none'};">
           <i class="${s.icon}" style="font-size:1.3rem;background:linear-gradient(135deg,#00D8FF,#A86BFF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:8px;display:block;"></i>
           <div style="font-size:1.25rem;font-weight:800;color:#FDFDFD;">${s.val}</div>
           <div style="font-size:.7rem;color:rgba(255,255,255,.4);margin-top:3px;">${s.label}</div>
@@ -137,7 +137,7 @@ const homeContent = `
       <p style="font-size:.95rem;color:rgba(253,253,253,.5);max-width:520px;margin:0 auto;">Follow along as we build the world's largest AI agent creative platform — openly, in public.</p>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-5 fade-up">
+    <div class="grid md:grid-cols-3 gap-5 fade-up twitter-grid">
       ${[
         { handle:'@DaVinciAiZ', text:'🚀 Introducing Visio — our most powerful text-to-image agent yet. 48,000+ generations in beta. What will you create?', time:'2h ago', likes:'1.2k', rt:'384' },
         { handle:'@DaVinciAiZ', text:'⚡ Genesis agent just hit 10,000 NFT collections generated! The AI-native creator economy is here. $DAVINCI TGE Q4 2025 🎨', time:'8h ago', likes:'2.8k', rt:'891' },
@@ -199,7 +199,7 @@ const homeContent = `
     </div>
 
     <!-- Agent Grid -->
-    <div id="agentGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div id="agentGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 agent-grid">
       ${aiAgents.map(agent=>`
         <div class="agent-card fade-up" data-category="${agent.category}" data-output="${agent.outputType}" style="background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:28px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden;" 
           onmouseover="this.style.borderColor='${agent.accentColor}33';this.style.background='rgba(255,255,255,.04)';this.style.transform='translateY(-4px)'" 
@@ -260,7 +260,7 @@ const homeContent = `
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-8 how-it-works-grid">
       ${[
         { step:'01', icon:'fas fa-robot', title:'Choose Your Agent', color:'#00D8FF', desc:'Browse 15+ specialized AI agents across art, video, music, code, and Web3. Each agent is purpose-built for peak performance in its domain.' },
         { step:'02', icon:'fas fa-wand-magic-sparkles', title:'Prompt & Generate', color:'#A86BFF', desc:'Describe your vision in natural language. Your chosen agent processes your request using state-of-the-art AI models to deliver stunning results.' },
@@ -292,7 +292,7 @@ const homeContent = `
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 ecosystem-grid">
       ${[
         { icon:'fas fa-robot', title:'AI Agent Studio', color:'#00D8FF', desc:'15+ specialized agents for art, video, music, writing, and code. State-of-the-art models in one unified interface.', tags:['Art','Video','Music','Code','NFT'], link:'/agents' },
         { icon:'fas fa-gem', title:'NFT Marketplace', color:'#A86BFF', desc:'Mint, trade, and collect AI-generated NFTs on BNB Chain. Royalties automated on-chain. Full IP ownership.', tags:['Mint','Trade','Royalties','BNB'], link:'/create/image' },
@@ -327,7 +327,7 @@ const homeContent = `
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 about-grid">
       ${[
         { icon:'fas fa-brain', title:'Multi-Agent AI Engine', color:'#00D8FF', desc:'15+ specialized AI agents — each purpose-built for its domain. Art, Video, Music, Code, NFT, 3D, Analytics and more. Always best-in-class.' },
         { icon:'fas fa-shield-halved', title:'Blockchain-Verified Ownership', color:'#A86BFF', desc:'Every AI creation is immutably recorded on BNB Chain. Provenance, authenticity, and ownership — all verifiable on-chain forever.' },
@@ -365,7 +365,7 @@ const homeContent = `
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid md:grid-cols-4 gap-4 mb-12 fade-up">
+    <div class="grid md:grid-cols-4 gap-4 mb-12 fade-up tokenomics-key-items">
       ${[
         { label:'Total Supply', value:'8,888,888,888', icon:'fas fa-coins', color:'#00D8FF' },
         { label:'Network', value:'BNB Chain', icon:'fas fa-link', color:'#F0B90B' },
@@ -380,10 +380,10 @@ const homeContent = `
       `).join('')}
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <div class="grid lg:grid-cols-2 gap-12 items-center tokenomics-chart-wrap">
       <div class="fade-up" style="display:flex;justify-content:center;">
-        <div style="position:relative;width:320px;height:320px;">
-          <canvas id="tokenomicsChart" width="320" height="320"></canvas>
+        <div style="position:relative;width:280px;height:280px;">
+          <canvas id="tokenomicsChart" width="280" height="280"></canvas>
           <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;">
             <div style="font-size:1.8rem;font-weight:800;color:#FDFDFD;">8.88B</div>
             <div style="font-size:.75rem;color:rgba(255,255,255,.4);">Total Supply</div>
@@ -465,7 +465,7 @@ const homeContent = `
       <div class="fade-up" style="margin-top:48px;">
         <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:8px;">Monthly Cumulative Circulating Supply</h3>
         <p style="font-size:.82rem;color:rgba(255,255,255,.4);margin-bottom:20px;">Full unlock at Month 60 (5 years) — 100% of supply in circulation</p>
-        <div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(255,255,255,.07);">
+        <div class="vesting-monthly-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:12px;border:1px solid rgba(255,255,255,.07);">
           <table style="width:100%;border-collapse:collapse;font-size:.78rem;min-width:720px;">
             <thead style="background:rgba(0,216,255,.06);">
               <tr>
@@ -536,9 +536,9 @@ const homeContent = `
           { phase:'Phase 4', period:'Q3–Q4 2026', status:'upcoming', title:'Multi-Chain & Scale', items:['Ethereum & Polygon bridge','3D & XR agents (Sculptor, Realm)','Layer 2 gas optimization','Creator Academy launch','100,000+ users milestone'] },
           { phase:'Phase 5', period:'2027+', status:'future', title:'The Renaissance Protocol', items:['Decentralized AI training platform','DaVinci L2 blockchain research','Cross-chain agent portability','AI DAO autonomous governance','1M+ creators onboarded'] },
         ].map((r,i)=>`
-          <div class="fade-up grid lg:grid-cols-2 gap-8 items-center" style="${i%2===1?'direction:rtl;':''}">
-            <div style="${i%2===1?'direction:ltr;':''}">
-              <div style="background:rgba(255,255,255,.02);border:1px solid ${r.status==='completed'?'rgba(0,216,255,.3)':r.status==='current'?'rgba(168,107,255,.4)':'rgba(255,255,255,.08)'};border-radius:20px;padding:28px;position:relative;overflow:hidden;">
+          <div class="fade-up roadmap-item" style="display:grid;gap:16px;">
+            <div class="roadmap-inner">
+              <div style="background:rgba(255,255,255,.02);border:1px solid ${r.status==='completed'?'rgba(0,216,255,.3)':r.status==='current'?'rgba(168,107,255,.4)':'rgba(255,255,255,.08)'};border-radius:20px;padding:24px;position:relative;overflow:hidden;">
                 ${r.status==='current'?`<div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#A86BFF,#00D8FF);"></div>`:''}
                 <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;">
                   <span style="font-size:.7rem;font-weight:700;padding:4px 12px;border-radius:50px;background:${r.status==='completed'?'rgba(0,216,255,.15)':r.status==='current'?'rgba(168,107,255,.2)':'rgba(255,255,255,.07)'};color:${r.status==='completed'?'#00D8FF':r.status==='current'?'#A86BFF':'rgba(255,255,255,.4)'};">
@@ -546,7 +546,7 @@ const homeContent = `
                   </span>
                   <span style="font-size:.8rem;color:rgba(255,255,255,.4);">${r.period}</span>
                 </div>
-                <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:16px;">${r.phase}: ${r.title}</h3>
+                <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:16px;">${r.phase}: ${r.title}</h3>
                 <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
                   ${r.items.map(item=>`
                     <li style="display:flex;align-items:center;gap:10px;font-size:.85rem;color:rgba(253,253,253,.7);">
@@ -581,7 +581,7 @@ const homeContent = `
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 team-inner-grid">
       ${[
         { name:'Leonardo Chen', role:'CEO & Co-Founder', bg:'#00D8FF', icon:'fas fa-crown', desc:'Former AI Research Lead at DeepMind. 10+ years building generative AI systems. Blockchain architect since 2017.', x:'@LeonardoChenAI' },
         { name:'Aria Nakamoto', role:'CTO & Co-Founder', bg:'#A86BFF', icon:'fas fa-code', desc:'Ex-Ethereum core contributor. Solidity expert with 5 deployed DeFi protocols. Smart contract security specialist.', x:'@AriaNakamoto' },
@@ -616,7 +616,7 @@ const homeContent = `
       <div class="section-divider"></div>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 partner-grid">
       ${[
         { name:'OpenAI', icon:'fas fa-robot', color:'#10a37f', desc:'DALL-E 3' },
         { name:'Midjourney', icon:'fas fa-wand-magic-sparkles', color:'#9B59B6', desc:'v6 API' },
@@ -685,7 +685,7 @@ const homeContent = `
     <p style="font-size:1.05rem;color:rgba(253,253,253,.6);max-width:560px;margin:0 auto 44px;line-height:1.8;">
       ${platformStats.totalAgents}+ AI agents. 8,888+ creators. $8.88B token economy. The future of AI-native creative intelligence starts here.
     </p>
-    <div class="flex flex-wrap justify-center gap-4">
+    <div class="flex flex-wrap justify-center gap-3 hero-cta-wrap" style="margin-top:0;">
       <a href="/agents" class="btn-primary" style="font-size:1.05rem;padding:16px 40px;"><i class="fas fa-robot"></i> Explore AI Agents</a>
       <a href="https://x.com/DaVinciAiZ" target="_blank" class="btn-outline" style="font-size:1.05rem;padding:15px 36px;">
         <svg viewBox="0 0 24 24" style="width:18px;height:18px;fill:#00D8FF;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.259 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -784,7 +784,7 @@ window.addEventListener('load',()=>{
           borderColor:'#080C14',borderWidth:3,hoverOffset:8
         }]
       },
-      options:{ responsive:false, cutout:'72%', plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}} } }
+      options:{ responsive:true, maintainAspectRatio:true, cutout:'72%', plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>c.label+': '+c.parsed+'%'}} } }
     });
   }
 
@@ -829,5 +829,88 @@ export const homePage = layout('Home — DaVinci AI: AI Agent Creative Platform'
   }
   .fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s, transform .7s; }
   .fade-up.visible { opacity:1; transform:translateY(0); }
+
+  /* ====== GLOBAL MOBILE FIX ====== */
+  * { box-sizing:border-box; }
+  html, body { overflow-x:hidden; max-width:100%; }
+
+  /* ====== HERO ====== */
+  @media(max-width:1023px){
+    .hero-agent-visual { display:none !important; }
+  }
+  @media(max-width:767px){
+    .hero-cta-wrap { flex-direction:column !important; align-items:stretch !important; }
+    .hero-cta-wrap a { text-align:center; justify-content:center !important; }
+  }
+
+  /* ====== TRUST BAR ====== */
+  @media(max-width:639px){
+    .trust-bar-item { min-width:calc(33.333% - 8px) !important; border-right:none !important; padding:14px 8px !important; }
+  }
+
+  /* ====== TOKENOMICS CHART ====== */
+  @media(max-width:767px){
+    .tokenomics-chart-wrap { flex-direction:column !important; align-items:center !important; }
+    .tokenomics-legend { width:100% !important; max-width:100% !important; }
+    #tokenomicsChart { width:220px !important; height:220px !important; }
+  }
+
+  /* ====== VESTING TABLE ====== */
+  .vesting-monthly-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .vesting-monthly-wrap table { min-width:700px; }
+
+  /* ====== ROADMAP ALTERNATING ====== */
+  @media(max-width:1023px){
+    .roadmap-item { direction:ltr !important; }
+    .roadmap-inner { direction:ltr !important; }
+  }
+
+  /* ====== TEAM CARDS ====== */
+  @media(max-width:639px){
+    .team-grid { grid-template-columns:1fr 1fr !important; }
+  }
+  @media(max-width:400px){
+    .team-grid { grid-template-columns:1fr !important; }
+  }
+
+  /* ====== PARTNER GRID ====== */
+  @media(max-width:639px){
+    .partner-grid { grid-template-columns:repeat(3,1fr) !important; gap:12px !important; }
+  }
+
+  /* ====== FAQ ====== */
+  @media(max-width:639px){
+    .faq-item { padding:16px !important; }
+  }
+
+  /* ====== AGENT FILTER BUTTONS ====== */
+  #agentFilters { overflow-x:auto; flex-wrap:nowrap !important; padding-bottom:8px; -webkit-overflow-scrolling:touch; justify-content:flex-start !important; }
+  @media(min-width:640px){
+    #agentFilters { flex-wrap:wrap !important; justify-content:center !important; }
+  }
+  #agentFilters button { flex-shrink:0; white-space:nowrap; }
+
+  /* ====== PREVENT FIXED-WIDTH OVERFLOW ====== */
+  @media(max-width:767px){
+    [style*="min-width:700px"], [style*="min-width:720px"], [style*="min-width:750px"] {
+      /* overridden per-element with wrapper */
+    }
+    .stats-row { grid-template-columns:1fr 1fr !important; }
+    .how-it-works-grid { grid-template-columns:1fr !important; }
+    .ecosystem-grid { grid-template-columns:1fr 1fr !important; }
+    .about-grid { grid-template-columns:1fr 1fr !important; }
+    .twitter-grid { grid-template-columns:1fr !important; }
+    .agent-grid { grid-template-columns:1fr !important; }
+    .tokenomics-key-items { grid-template-columns:1fr 1fr !important; }
+    .roadmap-grid { grid-template-columns:1fr !important; }
+    .team-inner-grid { grid-template-columns:1fr 1fr !important; }
+    .cta-inner { padding:40px 20px !important; }
+    .section-inner-px { padding-left:16px !important; padding-right:16px !important; }
+  }
+  @media(max-width:480px){
+    .ecosystem-grid { grid-template-columns:1fr !important; }
+    .about-grid { grid-template-columns:1fr !important; }
+    .tokenomics-key-items { grid-template-columns:1fr !important; }
+  }
 </style>
 `)

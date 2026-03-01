@@ -11,8 +11,14 @@ export const layout = (title: string, content: string, extraHead = '') => `<!DOC
   <style>
     :root { --cyan:#00D8FF; --violet:#A86BFF; --bg:#080C14; }
     * { margin:0; padding:0; box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { font-family:'Space Grotesk',sans-serif; background:#080C14; color:#FDFDFD; overflow-x:hidden; }
+    html { scroll-behavior:smooth; overflow-x:hidden; max-width:100vw; }
+    body { font-family:'Space Grotesk',sans-serif; background:#080C14; color:#FDFDFD; overflow-x:hidden; max-width:100vw; width:100%; }
+    img, video, canvas, iframe, table { max-width:100%; }
+    .max-w-7xl { max-width:80rem; width:100%; }
+    @media(max-width:768px){
+      .max-w-7xl { padding-left:16px!important; padding-right:16px!important; }
+      section { padding-left:0!important; padding-right:0!important; }
+    }
 
     .gradient-text { background:linear-gradient(135deg,#00D8FF,#A86BFF); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
     .btn-primary { background:linear-gradient(135deg,#00D8FF,#A86BFF); color:#080C14; font-weight:700; padding:12px 28px; border-radius:50px; font-size:0.9rem; cursor:pointer; border:none; transition:all .3s; display:inline-flex; align-items:center; gap:8px; text-decoration:none; }
