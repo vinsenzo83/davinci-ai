@@ -49,15 +49,15 @@ export const layout = (title: string, content: string, extraHead = '') => `<!DOC
       </div>
       <span style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;">Da<span class="gradient-text">Vinci</span><span style="color:rgba(255,255,255,.3);font-weight:300;font-size:.7rem;margin-left:4px;">AI</span></span>
     </a>
-    <div class="hidden md:flex items-center gap-7">
-      <a href="/#about" class="nav-link">About</a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="/#agents" class="nav-link"><i class="fas fa-robot" style="font-size:.75rem;margin-right:4px;opacity:.6;"></i>Agents</a>
       <a href="/#ecosystem" class="nav-link">Ecosystem</a>
-      <a href="/create/image" class="nav-link">AI Studio</a>
       <a href="/#tokenomics" class="nav-link">Tokenomics</a>
+      <a href="/#roadmap" class="nav-link">Roadmap</a>
       <a href="/whitepaper" class="nav-link">Whitepaper</a>
     </div>
     <div class="hidden md:flex items-center gap-3">
-      <a href="/mypage" class="nav-link" style="color:rgba(255,255,255,.5);font-size:.85rem;"><i class="fas fa-user-circle mr-1"></i>My Page</a>
+      <a href="/mypage" class="nav-link" style="color:rgba(255,255,255,.5);font-size:.85rem;"><i class="fas fa-user-circle" style="margin-right:4px;"></i>My Page</a>
       <a href="/login" class="btn-primary" style="padding:9px 22px;font-size:.85rem;">
         <i class="fas fa-wallet"></i> Connect Wallet
       </a>
@@ -67,10 +67,12 @@ export const layout = (title: string, content: string, extraHead = '') => `<!DOC
     </button>
   </div>
   <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 flex flex-col gap-4" style="border-top:1px solid rgba(0,216,255,.1);padding-top:16px;">
-    <a href="/" class="nav-link">Home</a>
-    <a href="/create/image" class="nav-link">AI Image</a>
-    <a href="/create/video" class="nav-link">AI Video</a>
-    <a href="/whitepaper" class="nav-link">Whitepaper</a>
+    <a href="/" class="nav-link"><i class="fas fa-home" style="margin-right:6px;opacity:.6;"></i>Home</a>
+    <a href="/#agents" class="nav-link"><i class="fas fa-robot" style="margin-right:6px;opacity:.6;"></i>AI Agents</a>
+    <a href="/#ecosystem" class="nav-link"><i class="fas fa-layer-group" style="margin-right:6px;opacity:.6;"></i>Ecosystem</a>
+    <a href="/#tokenomics" class="nav-link"><i class="fas fa-coins" style="margin-right:6px;opacity:.6;"></i>Tokenomics</a>
+    <a href="/whitepaper" class="nav-link"><i class="fas fa-file-alt" style="margin-right:6px;opacity:.6;"></i>Whitepaper</a>
+    <a href="/mypage" class="nav-link"><i class="fas fa-user-circle" style="margin-right:6px;opacity:.6;"></i>My Page</a>
     <a href="/login" class="btn-primary" style="justify-content:center;"><i class="fas fa-wallet"></i> Connect Wallet</a>
   </div>
 </nav>
