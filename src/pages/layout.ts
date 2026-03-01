@@ -81,48 +81,78 @@ ${content}
 </main>
 
 <!-- FOOTER -->
-<footer style="background:#05080F;padding:48px 0 24px;border-top:1px solid rgba(255,255,255,.05);">
+<footer style="background:#03050A;padding:60px 0 30px;border-top:1px solid rgba(255,255,255,.05);">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="grid md:grid-cols-4 gap-8 mb-10">
+    <div class="grid md:grid-cols-4 gap-8 mb-12">
+      <!-- Brand -->
       <div>
-        <div class="flex items-center gap-3 mb-4">
-          <div style="width:36px;height:36px;background:linear-gradient(135deg,#00D8FF,#A86BFF);border-radius:9px;display:flex;align-items:center;justify-content:center;">
-            <span style="font-family:'Poppins';font-weight:900;font-size:.9rem;color:#080C14;">D</span>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#00D8FF,#A86BFF);border-radius:10px;display:flex;align-items:center;justify-content:center;">
+            <span style="font-family:'Poppins',sans-serif;font-weight:900;font-size:.95rem;color:#080C14;">D</span>
           </div>
-          <span style="font-family:'Poppins';font-weight:700;">DaVinci <span class="gradient-text">AI</span></span>
+          <span style="font-family:'Poppins',sans-serif;font-weight:700;">DaVinci <span class="gradient-text">AI</span></span>
         </div>
-        <p style="color:rgba(255,255,255,.35);font-size:.8rem;line-height:1.7;">Web3 Creative Intelligence Platform on BNB Chain.</p>
-      </div>
-      <div>
-        <h4 style="font-weight:600;margin-bottom:14px;font-size:.85rem;color:rgba(255,255,255,.6);">Platform</h4>
-        <div class="flex flex-col gap-3">
-          <a href="/create/image" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI Image Studio</a>
-          <a href="/create/video" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">AI Video Lab</a>
-          <a href="/#ecosystem" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">NFT Marketplace</a>
-          <a href="/mypage" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">My Gallery</a>
-        </div>
-      </div>
-      <div>
-        <h4 style="font-weight:600;margin-bottom:14px;font-size:.85rem;color:rgba(255,255,255,.6);">Resources</h4>
-        <div class="flex flex-col gap-3">
-          <a href="/whitepaper" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Whitepaper</a>
-          <a href="/whitepaper#tokenomics" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Tokenomics</a>
-          <a href="/whitepaper#roadmap" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'">Roadmap</a>
-          <a href="https://github.com/vinsenzo83/davinci-ai" target="_blank" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'"><i class="fab fa-github mr-1"></i>GitHub</a>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:16px;">Where Art Thinks.<br>Intelligence Meets Imagination.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://x.com/DaVinciAiZ" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            <svg viewBox="0 0 24 24" style="width:15px;height:15px;fill:#FDFDFD;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.259 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://t.me/DaVinciAiZ" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            <i class="fab fa-telegram" style="color:#FDFDFD;font-size:.85rem;"></i>
+          </a>
+          <a href="https://discord.com" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            <i class="fab fa-discord" style="color:#FDFDFD;font-size:.85rem;"></i>
+          </a>
+          <a href="https://github.com/vinsenzo83/davinci-ai" target="_blank" style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;transition:all .2s;text-decoration:none;" onmouseover="this.style.background='rgba(255,255,255,.15)'" onmouseout="this.style.background='rgba(255,255,255,.06)'">
+            <i class="fab fa-github" style="color:#FDFDFD;font-size:.85rem;"></i>
+          </a>
         </div>
       </div>
+      <!-- Platform -->
       <div>
-        <h4 style="font-weight:600;margin-bottom:14px;font-size:.85rem;color:rgba(255,255,255,.6);">Community</h4>
-        <div class="flex flex-col gap-3">
-          <a href="https://t.me/DaVinciAiZ" target="_blank" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'"><i class="fab fa-telegram"></i> Telegram</a>
-          <a href="https://x.com/DaVinciAiZ" target="_blank" style="color:rgba(255,255,255,.35);font-size:.82rem;text-decoration:none;display:flex;align-items:center;gap:6px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.35)'"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
-        </div>
-        <p style="margin-top:20px;font-size:.72rem;color:rgba(255,255,255,.2);line-height:1.6;">⚠️ Not financial advice. DYOR.</p>
+        <h4 style="font-weight:700;font-size:.9rem;margin-bottom:16px;">Platform</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+          <li><a href="/create/image" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">AI Image Studio</a></li>
+          <li><a href="/create/video" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">AI Video Lab</a></li>
+          <li><a href="/create/image" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">NFT Marketplace</a></li>
+          <li><a href="/" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Game Hub</a></li>
+          <li><a href="/mypage" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Staking &amp; Rewards</a></li>
+          <li><a href="/" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">DAO Governance</a></li>
+        </ul>
+      </div>
+      <!-- Resources -->
+      <div>
+        <h4 style="font-weight:700;font-size:.9rem;margin-bottom:16px;">Resources</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+          <li><a href="/whitepaper" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#A86BFF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Whitepaper</a></li>
+          <li><a href="https://github.com/vinsenzo83/davinci-ai" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#A86BFF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">GitHub Docs</a></li>
+          <li><a href="#" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#A86BFF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Token Contract</a></li>
+          <li><a href="#" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#A86BFF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Audit Report</a></li>
+          <li><a href="#" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#A86BFF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Brand Kit</a></li>
+          <li><a href="#" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#A86BFF'" onmouseout="this.style.color='rgba(255,255,255,.4)'">Developer API</a></li>
+        </ul>
+      </div>
+      <!-- Community -->
+      <div>
+        <h4 style="font-weight:700;font-size:.9rem;margin-bottom:16px;">Community</h4>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:10px;padding:0;">
+          <li><a href="https://x.com/DaVinciAiZ" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><i class="fab fa-x-twitter"></i>X (Twitter)</a></li>
+          <li><a href="https://t.me/DaVinciAiZ" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><i class="fab fa-telegram"></i>Telegram</a></li>
+          <li><a href="https://discord.com" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><i class="fab fa-discord"></i>Discord</a></li>
+          <li><a href="#" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><i class="fab fa-medium"></i>Medium Blog</a></li>
+          <li><a href="#" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><i class="fab fa-youtube"></i>YouTube</a></li>
+          <li><a href="#" target="_blank" style="font-size:.83rem;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.color='#00D8FF'" onmouseout="this.style.color='rgba(255,255,255,.4)'"><i class="fab fa-reddit"></i>Reddit</a></li>
+        </ul>
       </div>
     </div>
-    <div style="border-top:1px solid rgba(255,255,255,.05);padding-top:20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;">
-      <p style="color:rgba(255,255,255,.2);font-size:.78rem;">© 2025 DaVinci AI. All rights reserved.</p>
-      <p style="color:rgba(255,255,255,.15);font-size:.75rem;">Built on <span style="color:#F3BA2F;">BNB Chain</span></p>
+    <div style="border-top:1px solid rgba(255,255,255,.05);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;">
+      <p style="font-size:.78rem;color:rgba(255,255,255,.25);">© 2025 DaVinci AI. All rights reserved. Built on BNB Chain.</p>
+      <div style="display:flex;gap:16px;">
+        <a href="#" style="font-size:.75rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'">Privacy Policy</a>
+        <a href="#" style="font-size:.75rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'">Terms of Service</a>
+        <a href="#" style="font-size:.75rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s;" onmouseover="this.style.color='rgba(255,255,255,.6)'" onmouseout="this.style.color='rgba(255,255,255,.25)'">Cookie Policy</a>
+      </div>
+      <div style="font-size:.72rem;color:rgba(255,255,255,.15);">$DAVINCI is not a security. Not financial advice.</div>
     </div>
   </div>
 </footer>
