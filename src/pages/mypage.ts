@@ -1,277 +1,398 @@
 import { layout } from './layout'
+import { galleryImages, galleryVideos } from '../data/gallery-data'
 
-const mypageContent = `
-<section style="min-height:calc(100vh - 72px);background:#080C14;padding:48px 0;">
+const myImages = galleryImages.filter(img => img.minted).slice(0, 8)
+const myVids = galleryVideos.slice(0, 3)
+
+const myContent = `
+<div style="min-height:100vh;background:#080C14;padding:40px 0;">
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- Profile Header -->
-    <div style="background:linear-gradient(135deg,rgba(0,216,255,.05),rgba(168,107,255,.05));border:1px solid rgba(255,255,255,.07);border-radius:24px;padding:32px;margin-bottom:28px;position:relative;overflow:hidden;" id="profileHeader">
-      <div class="orb" style="width:300px;height:300px;background:rgba(0,216,255,.04);top:-100px;right:-50px;"></div>
-      <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;position:relative;z-index:2;">
+    <div style="background:linear-gradient(135deg,rgba(0,216,255,.06),rgba(168,107,255,.06));border:1px solid rgba(0,216,255,.15);border-radius:24px;padding:32px;margin-bottom:32px;position:relative;overflow:hidden;">
+      <div style="position:absolute;top:-50px;right:-50px;width:200px;height:200px;border-radius:50%;background:rgba(0,216,255,.04);"></div>
+      <div class="grid md:grid-cols-3 gap-6 items-center">
         <!-- Avatar -->
-        <div style="width:80px;height:80px;background:linear-gradient(135deg,#00D8FF,#A86BFF);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-          <span style="font-family:'Poppins';font-weight:900;font-size:2rem;color:#080C14;" id="avatarLetter">?</span>
-        </div>
-        <!-- Info -->
-        <div style="flex:1;min-width:200px;">
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-            <h1 style="font-family:'Poppins';font-weight:700;font-size:1.4rem;" id="profileName">Connect Wallet</h1>
-            <div style="background:rgba(0,216,255,.12);border:1px solid rgba(0,216,255,.25);border-radius:20px;padding:3px 12px;">
-              <span style="font-size:.72rem;color:#00D8FF;font-weight:600;" id="rankBadge">Apprentice</span>
+        <div style="display:flex;align-items:center;gap:16px;">
+          <div style="position:relative;">
+            <div style="width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#00D8FF,#A86BFF);display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;color:#080C14;">D</div>
+            <div style="position:absolute;bottom:2px;right:2px;width:18px;height:18px;background:#00D8FF;border-radius:50%;border:3px solid #080C14;"></div>
+          </div>
+          <div>
+            <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;">0xA1b2...c3d4</div>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.4);margin-bottom:6px;">Renaissance Creator · Level 7</div>
+            <div style="display:flex;gap:6px;">
+              <span style="font-size:.68rem;padding:3px 10px;border-radius:50px;background:rgba(0,216,255,.1);color:#00D8FF;border:1px solid rgba(0,216,255,.2);">Verified</span>
+              <span style="font-size:.68rem;padding:3px 10px;border-radius:50px;background:rgba(168,107,255,.1);color:#A86BFF;border:1px solid rgba(168,107,255,.2);">Genesis NFT Holder</span>
             </div>
           </div>
-          <p style="color:rgba(255,255,255,.35);font-size:.82rem;margin-top:4px;" id="walletAddr">---</p>
-          <p style="color:rgba(255,255,255,.25);font-size:.75rem;margin-top:2px;" id="authMethod">Not connected</p>
         </div>
-        <!-- Stats -->
-        <div class="grid grid-cols-3 gap-4">
+        <!-- Quick Stats -->
+        <div class="grid grid-cols-3 gap-3">
           ${[
-            {label:'Credits',val:'250',color:'#00D8FF',id:'statCredits'},
-            {label:'NFTs',val:'0',color:'#A86BFF',id:'statNFTs'},
-            {label:'$DAVINCI',val:'0',color:'#FFB800',id:'statTokens'}
-          ].map(s => `
-            <div style="text-align:center;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:14px 20px;">
-              <div style="font-size:1.4rem;font-weight:700;color:${s.color};" id="${s.id}">${s.val}</div>
-              <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-top:3px;">${s.label}</div>
-            </div>`).join('')}
+            {label:'$DAVINCI',val:'24,500',color:'#00D8FF'},
+            {label:'NFTs Owned',val:'12',color:'#A86BFF'},
+            {label:'AI Creations',val:'87',color:'#00D8FF'},
+          ].map(s=>`
+            <div style="text-align:center;background:rgba(0,0,0,.3);border-radius:12px;padding:14px;">
+              <div style="font-size:1.2rem;font-weight:800;color:${s.color};">${s.val}</div>
+              <div style="font-size:.68rem;color:rgba(255,255,255,.4);margin-top:2px;">${s.label}</div>
+            </div>
+          `).join('')}
         </div>
-        <!-- Connect Button (shown if not connected) -->
-        <a href="/login" id="connectBtn" class="btn-primary" style="padding:12px 24px;font-size:.875rem;">
-          <i class="fas fa-wallet"></i> Connect Wallet
-        </a>
+        <!-- Actions -->
+        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;">
+          <a href="/create/image" class="btn-primary" style="font-size:.85rem;padding:10px 22px;"><i class="fas fa-plus"></i> Create</a>
+          <button class="btn-outline" style="font-size:.85rem;padding:9px 20px;"><i class="fas fa-share-alt"></i> Share</button>
+          <button class="btn-outline" style="font-size:.85rem;padding:9px 20px;"><i class="fas fa-cog"></i> Settings</button>
+        </div>
       </div>
     </div>
 
     <!-- Tabs -->
-    <div style="display:flex;gap:4px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:5px;margin-bottom:24px;overflow-x:auto;">
-      ${[
-        {id:'tab-gallery',label:'NFT Gallery',icon:'fas fa-image'},
-        {id:'tab-history',label:'Creation History',icon:'fas fa-history'},
-        {id:'tab-staking',label:'Staking',icon:'fas fa-coins'},
-        {id:'tab-rewards',label:'Rewards',icon:'fas fa-star'},
-        {id:'tab-settings',label:'Settings',icon:'fas fa-cog'}
-      ].map((t,i) => `
-        <button id="${t.id}" onclick="switchTab('${t.id.split('-')[1]}')" style="flex:1;min-width:110px;padding:10px;border-radius:10px;border:none;background:${i===0?'linear-gradient(135deg,#00D8FF,#A86BFF)':'transparent'};color:${i===0?'#080C14':'rgba(255,255,255,.5)'};font-weight:${i===0?'700':'500'};font-size:.82rem;cursor:pointer;font-family:inherit;transition:all .3s;white-space:nowrap;">
-          <i class="${t.icon}" style="margin-right:5px;"></i>${t.label}
-        </button>`).join('')}
+    <div style="display:flex;gap:4px;background:rgba(255,255,255,.04);border-radius:14px;padding:4px;margin-bottom:28px;overflow-x:auto;">
+      ${['Overview','My NFTs','My Videos','Staking','Activity','Rewards'].map((tab,i)=>`
+        <button onclick="switchTab('${tab}')" id="tab-${tab}" style="flex:1;min-width:fit-content;padding:10px 16px;border-radius:10px;border:none;background:${i===0?'rgba(0,216,255,.12)':'transparent'};color:${i===0?'#00D8FF':'rgba(255,255,255,.4)'};font-size:.83rem;font-weight:600;cursor:pointer;white-space:nowrap;transition:all .2s;">${tab}</button>
+      `).join('')}
     </div>
 
-    <!-- ===== TAB: Gallery ===== -->
-    <div id="panel-gallery">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-        <h2 style="font-weight:700;font-size:1.1rem;">My NFT Gallery <span style="color:rgba(255,255,255,.3);font-size:.85rem;font-weight:400;">(0 items)</span></h2>
-        <div class="flex gap-2">
-          <a href="/create/image" class="btn-primary" style="padding:9px 18px;font-size:.82rem;"><i class="fas fa-plus"></i> Create</a>
-        </div>
-      </div>
-      <!-- Empty State -->
-      <div style="background:rgba(255,255,255,.02);border:1px dashed rgba(255,255,255,.08);border-radius:20px;padding:80px 40px;text-align:center;">
-        <div style="width:80px;height:80px;background:rgba(0,216,255,.06);border-radius:20px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
-          <i class="fas fa-image" style="color:rgba(0,216,255,.4);font-size:2rem;"></i>
-        </div>
-        <h3 style="font-weight:600;font-size:1.05rem;margin-bottom:8px;">No NFTs Yet</h3>
-        <p style="color:rgba(255,255,255,.35);font-size:.875rem;max-width:360px;margin:0 auto 24px;line-height:1.7;">Create AI art and mint it as an NFT on BNB Chain. Your collection will appear here.</p>
-        <a href="/create/image" class="btn-primary"><i class="fas fa-wand-magic-sparkles"></i> Start Creating</a>
-      </div>
-
-      <!-- Sample NFT cards (appear after minting) -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6" id="nftGrid" style="display:none;">
-        ${Array.from({length:4}).map((_,i) => `
-          <div style="border-radius:16px;overflow:hidden;background:linear-gradient(135deg,${['#1a0533,#2d1b69','#021a22,#065566','#0a2a1a,#1a4a2a','#2a1a00,#4a3000'][i]});border:1px solid rgba(0,216,255,.12);cursor:pointer;transition:all .3s;" onmouseover="this.style.borderColor='rgba(0,216,255,.4)'" onmouseout="this.style.borderColor='rgba(0,216,255,.12)'">
-            <div style="aspect-ratio:1;display:flex;align-items:flex-end;padding:12px;">
-              <div>
-                <div style="font-size:.75rem;font-weight:600;">DaVinci #${i+1}</div>
-                <div style="font-size:.65rem;color:rgba(0,216,255,.6);margin-top:2px;">0.005 BNB</div>
-              </div>
-            </div>
-            <div style="padding:10px 12px;border-top:1px solid rgba(255,255,255,.06);">
-              <div style="font-size:.7rem;color:rgba(255,255,255,.4);">Owned · BNB Chain</div>
-            </div>
-          </div>`).join('')}
-      </div>
-    </div>
-
-    <!-- ===== TAB: History ===== -->
-    <div id="panel-history" style="display:none;">
-      <h2 style="font-weight:700;font-size:1.1rem;margin-bottom:16px;">Creation History</h2>
-      <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;overflow:hidden;">
-        <table style="width:100%;border-collapse:collapse;">
-          <thead>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.06);">
-              <th style="padding:14px 20px;text-align:left;font-size:.8rem;color:rgba(255,255,255,.4);font-weight:600;">TYPE</th>
-              <th style="padding:14px 20px;text-align:left;font-size:.8rem;color:rgba(255,255,255,.4);font-weight:600;">PROMPT</th>
-              <th style="padding:14px 20px;text-align:left;font-size:.8rem;color:rgba(255,255,255,.4);font-weight:600;">MODEL</th>
-              <th style="padding:14px 20px;text-align:right;font-size:.8rem;color:rgba(255,255,255,.4);font-weight:600;">CREDITS</th>
-              <th style="padding:14px 20px;text-align:right;font-size:.8rem;color:rgba(255,255,255,.4);font-weight:600;">DATE</th>
-            </tr>
-          </thead>
-          <tbody id="historyTable">
-            <tr>
-              <td colspan="5" style="padding:60px;text-align:center;color:rgba(255,255,255,.25);font-size:.875rem;">
-                <i class="fas fa-history" style="font-size:1.5rem;display:block;margin-bottom:10px;color:rgba(255,255,255,.15);"></i>
-                No creation history yet
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ===== TAB: Staking ===== -->
-    <div id="panel-staking" style="display:none;">
-      <h2 style="font-weight:700;font-size:1.1rem;margin-bottom:16px;">$DAVINCI Staking</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+    <!-- ===== OVERVIEW TAB ===== -->
+    <div id="content-Overview">
+      <!-- Earnings & Stats -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         ${[
-          {tier:'Apprentice',req:'10,000',apy:'8%',perks:'+10% credits, Early Access',color:'#00D8FF'},
-          {tier:'Artist',req:'50,000',apy:'12%',perks:'+25% credits, Governance Vote',color:'#A86BFF'},
-          {tier:'Master',req:'200,000',apy:'18%',perks:'+50% credits, DAO Committee',color:'#00FFB2'},
-          {tier:'Da Vinci',req:'1,000,000',apy:'25%',perks:'Full Governance, Revenue Share',color:'#FFB800'}
-        ].map(t => `
-          <div style="background:rgba(255,255,255,.02);border:1px solid ${t.color}20;border-radius:16px;padding:20px;transition:all .3s;" onmouseover="this.style.borderColor='${t.color}60'" onmouseout="this.style.borderColor='${t.color}20'">
-            <div style="font-weight:700;color:${t.color};font-size:.95rem;margin-bottom:6px;">${t.tier}</div>
-            <div style="font-size:1.5rem;font-weight:700;margin-bottom:4px;">${t.apy} <span style="font-size:.75rem;color:rgba(255,255,255,.4);font-weight:400;">APY</span></div>
-            <div style="font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:10px;">Stake: ${t.req} DAVINCI</div>
-            <div style="font-size:.72rem;color:rgba(255,255,255,.5);line-height:1.5;">${t.perks}</div>
-          </div>`).join('')}
-      </div>
-      <div style="background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px;text-align:center;">
-        <p style="color:rgba(255,255,255,.35);font-size:.875rem;margin-bottom:20px;">Staking goes live at TGE (Q4 2025). Connect wallet to get notified.</p>
-        <a href="/login" class="btn-primary"><i class="fas fa-bell"></i> Get Notified</a>
-      </div>
-    </div>
-
-    <!-- ===== TAB: Rewards ===== -->
-    <div id="panel-rewards" style="display:none;">
-      <h2 style="font-weight:700;font-size:1.1rem;margin-bottom:16px;">Rewards & Airdrops</h2>
-      <div class="grid md:grid-cols-2 gap-4 mb-6">
-        <div style="background:linear-gradient(135deg,rgba(0,216,255,.06),rgba(0,216,255,.02));border:1px solid rgba(0,216,255,.15);border-radius:16px;padding:24px;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-            <i class="fas fa-trophy" style="color:#00D8FF;font-size:1.2rem;"></i>
-            <h3 style="font-weight:700;">Season 1 Airdrop</h3>
-            <span style="margin-left:auto;background:rgba(0,255,100,.1);border:1px solid rgba(0,255,100,.2);border-radius:20px;padding:3px 10px;font-size:.7rem;color:#00FF64;">LIVE</span>
-          </div>
-          <p style="color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.7;margin-bottom:16px;">Earn points by playing games, creating art, and inviting friends. Top 50% get $DAVINCI airdrop at TGE.</p>
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <div>
-              <div style="font-size:.75rem;color:rgba(255,255,255,.35);">Your points</div>
-              <div style="font-size:1.3rem;font-weight:700;color:#00D8FF;">0</div>
+          {icon:'fas fa-coins',label:'Total Earned',val:'24,500 DAVINCI',change:'+12.5%',color:'#00D8FF'},
+          {icon:'fas fa-chart-line',label:'NFT Sales Volume',val:'2.45 BNB ($890)',change:'+8.3%',color:'#A86BFF'},
+          {icon:'fas fa-lock',label:'Staking Rewards',val:'1,240 DAVINCI',change:'+5.2%',color:'#00D8FF'},
+          {icon:'fas fa-trophy',label:'Rank',val:'#142 Global',change:'↑ 23 places',color:'#A86BFF'},
+        ].map(s=>`
+          <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:20px;">
+            <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
+              <i class="${s.icon}" style="color:${s.color};font-size:1.1rem;"></i>
+              <span style="font-size:.72rem;color:#2ECC71;background:rgba(46,204,113,.1);padding:3px 8px;border-radius:50px;">${s.change}</span>
             </div>
-            <a href="https://t.me/DaVinciAiZ" target="_blank" class="btn-outline" style="padding:9px 18px;font-size:.8rem;"><i class="fab fa-telegram"></i> Join</a>
+            <div style="font-size:1.1rem;font-weight:800;margin-bottom:4px;">${s.val}</div>
+            <div style="font-size:.72rem;color:rgba(255,255,255,.4);">${s.label}</div>
+          </div>
+        `).join('')}
+      </div>
+
+      <!-- Recent Activity + Achievements -->
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Recent Activity -->
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:18px;"><i class="fas fa-history" style="color:#00D8FF;margin-right:8px;"></i>Recent Activity</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            ${[
+              {icon:'fas fa-image',action:'Generated AI artwork "Neon Tokyo v2"',time:'2 hours ago',color:'#00D8FF',reward:'+50 DAVINCI'},
+              {icon:'fas fa-gem',action:'Minted NFT "Cosmic Nebula" #0042',time:'1 day ago',color:'#A86BFF',reward:'Cost: 0.002 BNB'},
+              {icon:'fas fa-trophy',action:'Won Weekly Art Challenge #33',time:'2 days ago',color:'#F0B90B',reward:'+500 DAVINCI'},
+              {icon:'fas fa-coins',action:'Staked 10,000 DAVINCI (12 mo)',time:'5 days ago',color:'#2ECC71',reward:'24% APY'},
+              {icon:'fas fa-vote-yea',action:'Voted on Proposal: Add KlingAI v3',time:'1 week ago',color:'#00D8FF',reward:'+25 DAVINCI'},
+              {icon:'fas fa-tag',action:'Sold "Galaxy Core" NFT',time:'2 weeks ago',color:'#A86BFF',reward:'+0.15 BNB'},
+            ].map(a=>`
+              <div style="display:flex;align-items:center;gap:12px;padding:10px;background:rgba(255,255,255,.02);border-radius:10px;">
+                <div style="width:36px;height:36px;border-radius:50%;background:${a.color}18;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                  <i class="${a.icon}" style="color:${a.color};font-size:.85rem;"></i>
+                </div>
+                <div style="flex:1;min-width:0;">
+                  <div style="font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${a.action}</div>
+                  <div style="font-size:.7rem;color:rgba(255,255,255,.35);margin-top:2px;">${a.time}</div>
+                </div>
+                <div style="font-size:.75rem;color:${a.color};font-weight:700;white-space:nowrap;">${a.reward}</div>
+              </div>
+            `).join('')}
           </div>
         </div>
-        <div style="background:linear-gradient(135deg,rgba(168,107,255,.06),rgba(168,107,255,.02));border:1px solid rgba(168,107,255,.15);border-radius:16px;padding:24px;">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
-            <i class="fas fa-users" style="color:#A86BFF;font-size:1.2rem;"></i>
-            <h3 style="font-weight:700;">Referral Program</h3>
-          </div>
-          <p style="color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.7;margin-bottom:16px;">Invite friends and earn 100 credits per referral + 10% of their first month's creation activity.</p>
-          <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;">
-            <span style="font-size:.8rem;color:rgba(255,255,255,.35);" id="referralCode">Connect wallet to get code</span>
-            <button onclick="copyReferral()" style="background:none;border:none;color:#A86BFF;cursor:pointer;font-size:.8rem;"><i class="fas fa-copy"></i></button>
+
+        <!-- Achievements -->
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:18px;"><i class="fas fa-medal" style="color:#F0B90B;margin-right:8px;"></i>Achievements & Badges</h3>
+          <div class="grid grid-cols-3 gap-3">
+            ${[
+              {icon:'fas fa-star',name:'Early Adopter',color:'#F0B90B',unlocked:true},
+              {icon:'fas fa-gem',name:'NFT Pioneer',color:'#A86BFF',unlocked:true},
+              {icon:'fas fa-crown',name:'Genesis Creator',color:'#00D8FF',unlocked:true},
+              {icon:'fas fa-fire',name:'Hot Streak',color:'#FF6B6B',unlocked:true},
+              {icon:'fas fa-robot',name:'AI Master',color:'#00D8FF',unlocked:false},
+              {icon:'fas fa-vote-yea',name:'DAO Voter',color:'#2ECC71',unlocked:false},
+              {icon:'fas fa-users',name:'Referral King',color:'#A86BFF',unlocked:false},
+              {icon:'fas fa-trophy',name:'Champion',color:'#F0B90B',unlocked:false},
+              {icon:'fas fa-infinity',name:'Legendary',color:'rgba(255,255,255,.2)',unlocked:false},
+            ].map(b=>`
+              <div style="text-align:center;padding:14px 8px;background:rgba(255,255,255,.02);border-radius:12px;border:1px solid ${b.unlocked?b.color+'33':'rgba(255,255,255,.05)'};opacity:${b.unlocked?'1':'.4'};">
+                <i class="${b.icon}" style="font-size:1.4rem;color:${b.unlocked?b.color:'rgba(255,255,255,.2)'};margin-bottom:6px;display:block;"></i>
+                <div style="font-size:.65rem;color:${b.unlocked?'rgba(255,255,255,.7)':'rgba(255,255,255,.3)'};">${b.name}</div>
+              </div>
+            `).join('')}
           </div>
         </div>
       </div>
     </div>
 
-    <!-- ===== TAB: Settings ===== -->
-    <div id="panel-settings" style="display:none;">
-      <h2 style="font-weight:700;font-size:1.1rem;margin-bottom:16px;">Account Settings</h2>
-      <div class="grid md:grid-cols-2 gap-4">
-        <div class="card-glass p-6">
-          <h3 style="font-weight:600;margin-bottom:16px;color:rgba(255,255,255,.7);">Profile</h3>
-          <div class="flex flex-col gap-4">
-            <div><label style="font-size:.78rem;color:rgba(255,255,255,.4);display:block;margin-bottom:6px;">Display Name</label>
-              <input type="text" placeholder="Da Vinci Artist" id="displayName"></div>
-            <div><label style="font-size:.78rem;color:rgba(255,255,255,.4);display:block;margin-bottom:6px;">Bio</label>
-              <textarea rows="3" placeholder="AI artist and Web3 explorer..." style="resize:none;"></textarea></div>
-            <button class="btn-primary" style="width:100%;justify-content:center;"><i class="fas fa-save"></i> Save Changes</button>
+    <!-- ===== MY NFTS TAB ===== -->
+    <div id="content-My NFTs" style="display:none;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px;">
+        <h2 style="font-weight:700;font-size:1.05rem;">My NFT Collection <span style="color:rgba(255,255,255,.4);font-size:.85rem;font-weight:400;">(12 items)</span></h2>
+        <select style="padding:9px 16px;font-size:.83rem;" onchange="">
+          <option>Sort: Recently Minted</option>
+          <option>Sort: Highest Price</option>
+          <option>Sort: Most Likes</option>
+        </select>
+      </div>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        ${myImages.map(img=>`
+          <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;transition:all .3s;" onmouseover="this.style.borderColor='rgba(168,107,255,.4)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)'">
+            <div style="position:relative;padding-bottom:100%;overflow:hidden;">
+              <img src="${img.thumb}" alt="${img.title}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+              <div style="position:absolute;top:8px;right:8px;background:rgba(168,107,255,.8);border-radius:6px;padding:3px 8px;font-size:.62rem;font-weight:700;"><i class="fas fa-gem" style="margin-right:3px;"></i>MINTED</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="font-weight:700;font-size:.88rem;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${img.title}</div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:10px;">${img.model}</div>
+              <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-size:.88rem;font-weight:700;color:#A86BFF;">${img.price}</span>
+                <div style="display:flex;gap:6px;">
+                  <button style="padding:6px 12px;font-size:.72rem;border-radius:8px;border:1px solid rgba(0,216,255,.3);background:transparent;color:#00D8FF;cursor:pointer;">List</button>
+                  <button style="padding:6px 12px;font-size:.72rem;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(255,255,255,.5);cursor:pointer;">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- ===== MY VIDEOS TAB ===== -->
+    <div id="content-My Videos" style="display:none;">
+      <div style="margin-bottom:20px;">
+        <h2 style="font-weight:700;font-size:1.05rem;">My AI Videos <span style="color:rgba(255,255,255,.4);font-size:.85rem;font-weight:400;">(${myVids.length} items)</span></h2>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        ${myVids.map(v=>`
+          <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;">
+            <div style="position:relative;padding-bottom:56.25%;">
+              <img src="${v.thumb}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+              <div style="position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center;">
+                <div style="width:50px;height:50px;border-radius:50%;background:rgba(0,216,255,.2);border:2px solid rgba(0,216,255,.6);display:flex;align-items:center;justify-content:center;">
+                  <i class="fas fa-play" style="color:#00D8FF;margin-left:3px;"></i>
+                </div>
+              </div>
+              <div style="position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,.8);border-radius:5px;padding:3px 8px;font-size:.7rem;">${v.duration}</div>
+            </div>
+            <div style="padding:14px;">
+              <div style="font-weight:700;margin-bottom:4px;">${v.title}</div>
+              <div style="font-size:.75rem;color:rgba(255,255,255,.4);margin-bottom:10px;">${v.model} · ${v.views.toLocaleString()} views</div>
+              <div style="display:flex;gap:6px;">
+                <button style="flex:1;padding:8px;border-radius:8px;border:1px solid rgba(168,107,255,.3);background:transparent;color:#A86BFF;font-size:.75rem;cursor:pointer;"><i class="fas fa-gem" style="margin-right:4px;"></i>Mint NFT</button>
+                <button style="padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(255,255,255,.5);font-size:.75rem;cursor:pointer;"><i class="fas fa-share-alt"></i></button>
+              </div>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- ===== STAKING TAB ===== -->
+    <div id="content-Staking" style="display:none;">
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Staking Overview -->
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:20px;"><i class="fas fa-lock" style="color:#00D8FF;margin-right:8px;"></i>Active Stakes</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            ${[
+              {amount:'10,000',lock:'12 months',apy:'24%',earned:'1,240',color:'#00D8FF',days:180},
+              {amount:'5,000',lock:'6 months',apy:'15%',earned:'375',color:'#A86BFF',days:45},
+            ].map(s=>`
+              <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:16px;">
+                <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px;">
+                  <div>
+                    <div style="font-weight:800;font-size:1.1rem;color:${s.color};">${s.amount} DAVINCI</div>
+                    <div style="font-size:.72rem;color:rgba(255,255,255,.4);">${s.lock} lock · ${s.apy} APY</div>
+                  </div>
+                  <div style="text-align:right;">
+                    <div style="font-size:.8rem;color:#2ECC71;font-weight:700;">+${s.earned} earned</div>
+                    <div style="font-size:.7rem;color:rgba(255,255,255,.35);">${s.days} days left</div>
+                  </div>
+                </div>
+                <div style="height:5px;background:rgba(255,255,255,.07);border-radius:3px;">
+                  <div style="height:100%;width:${100 - (s.days/(s.lock==='12 months'?365:180)*100)}%;background:${s.color};border-radius:3px;"></div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          <div style="margin-top:16px;padding:16px;background:rgba(0,216,255,.06);border-radius:12px;border:1px solid rgba(0,216,255,.15);">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div>
+                <div style="font-size:.8rem;color:rgba(255,255,255,.5);">Total Staked</div>
+                <div style="font-size:1.1rem;font-weight:800;color:#00D8FF;">15,000 DAVINCI</div>
+              </div>
+              <div style="text-align:right;">
+                <div style="font-size:.8rem;color:rgba(255,255,255,.5);">Total Rewards</div>
+                <div style="font-size:1.1rem;font-weight:800;color:#2ECC71;">+1,615 DAVINCI</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="card-glass p-6">
-          <h3 style="font-weight:600;margin-bottom:16px;color:rgba(255,255,255,.7);">Notifications</h3>
-          ${[
-            {label:'Airdrop Alerts',sub:'New season & reward notifications'},
-            {label:'NFT Sales',sub:'When your NFTs are sold'},
-            {label:'Price Alerts',sub:'$DAVINCI price movements'},
-            {label:'Weekly Report',sub:'Your creation summary'}
-          ].map(n => `
-            <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.05);">
-              <div>
-                <div style="font-size:.88rem;font-weight:500;">${n.label}</div>
-                <div style="font-size:.75rem;color:rgba(255,255,255,.35);margin-top:2px;">${n.sub}</div>
+
+        <!-- Stake New -->
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:20px;"><i class="fas fa-plus-circle" style="color:#A86BFF;margin-right:8px;"></i>Stake $DAVINCI</h3>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div>
+              <label style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:8px;display:block;">Amount to Stake</label>
+              <div style="position:relative;">
+                <input type="number" placeholder="Enter amount" value="1000">
+                <span style="position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.8rem;color:#00D8FF;font-weight:700;">DAVINCI</span>
               </div>
-              <label style="position:relative;display:inline-block;width:44px;height:24px;cursor:pointer;">
-                <input type="checkbox" checked style="opacity:0;width:0;height:0;">
-                <span style="position:absolute;inset:0;background:linear-gradient(135deg,#00D8FF,#A86BFF);border-radius:12px;transition:.3s;"></span>
-                <span style="position:absolute;width:18px;height:18px;background:white;border-radius:50%;top:3px;left:3px;transition:.3s;"></span>
-              </label>
-            </div>`).join('')}
-          <div style="margin-top:16px;"><button style="background:rgba(255,100,100,.08);border:1px solid rgba(255,100,100,.2);border-radius:12px;padding:10px 18px;color:#FF6B6B;font-size:.82rem;cursor:pointer;font-family:inherit;transition:all .3s;display:flex;align-items:center;gap:8px;" onmouseover="this.style.background='rgba(255,100,100,.15)'" onmouseout="this.style.background='rgba(255,100,100,.08)'">
-            <i class="fas fa-sign-out-alt"></i> Disconnect Wallet
-          </button></div>
+              <div style="font-size:.72rem;color:rgba(255,255,255,.35);margin-top:6px;">Available: 9,500 DAVINCI</div>
+            </div>
+            <div>
+              <label style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:8px;display:block;">Lock Period</label>
+              <div class="grid grid-cols-3 gap-3">
+                ${[
+                  {period:'1 Month',apy:'8%'},
+                  {period:'3 Months',apy:'12%'},
+                  {period:'6 Months',apy:'15%'},
+                  {period:'12 Months',apy:'24%'},
+                  {period:'24 Months',apy:'36%'},
+                  {period:'48 Months',apy:'48%'},
+                ].map((l,i)=>`
+                  <button onclick="selectLock(this,'${l.apy}')" style="padding:12px 8px;border-radius:10px;border:1px solid ${i===3?'#00D8FF':'rgba(255,255,255,.1)'};background:${i===3?'rgba(0,216,255,.12)':'transparent'};cursor:pointer;text-align:center;">
+                    <div style="font-size:.75rem;font-weight:700;color:${i===3?'#00D8FF':'rgba(255,255,255,.6)'};">${l.period}</div>
+                    <div style="font-size:.65rem;color:${i===3?'#2ECC71':'rgba(255,255,255,.3)'};">${l.apy} APY</div>
+                  </button>
+                `).join('')}
+              </div>
+            </div>
+            <div style="background:rgba(255,255,255,.03);border-radius:10px;padding:14px;font-size:.82rem;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                <span style="color:rgba(255,255,255,.4);">Estimated Annual Reward</span>
+                <span style="color:#2ECC71;font-weight:700;" id="est-reward">240 DAVINCI</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;">
+                <span style="color:rgba(255,255,255,.4);">APY</span>
+                <span style="color:#00D8FF;font-weight:700;" id="est-apy">24%</span>
+              </div>
+            </div>
+            <button class="btn-primary" style="width:100%;justify-content:center;padding:14px;"><i class="fas fa-lock"></i> Stake Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ACTIVITY TAB ===== -->
+    <div id="content-Activity" style="display:none;">
+      <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+        <h3 style="font-weight:700;font-size:.95rem;margin-bottom:20px;">Transaction History</h3>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          ${[
+            {type:'earn',icon:'fas fa-wand-magic-sparkles',desc:'Generated "Cyber Portrait v3"',hash:'0xab12...3456',amount:'+50 DAVINCI',time:'2025-03-01 14:22',color:'#00D8FF'},
+            {type:'earn',icon:'fas fa-trophy',desc:'Won Weekly Art Challenge #33',hash:'0xbc23...4567',amount:'+500 DAVINCI',time:'2025-02-28 09:15',color:'#F0B90B'},
+            {type:'mint',icon:'fas fa-gem',desc:'Minted NFT: Cosmic Nebula #0042',hash:'0xcd34...5678',amount:'-0.002 BNB',time:'2025-02-27 16:40',color:'#A86BFF'},
+            {type:'sale',icon:'fas fa-tag',desc:'Sold: Galaxy Core #0018 → 0x9f8e...7d6c',hash:'0xde45...6789',amount:'+0.15 BNB',time:'2025-02-26 11:05',color:'#2ECC71'},
+            {type:'stake',icon:'fas fa-lock',desc:'Staked 10,000 DAVINCI (12 months)',hash:'0xef56...7890',amount:'-10,000 DAVINCI',time:'2025-02-20 13:30',color:'#00D8FF'},
+            {type:'earn',icon:'fas fa-vote-yea',desc:'DAO Vote: Add KlingAI v3',hash:'0xf067...8901',amount:'+25 DAVINCI',time:'2025-02-18 10:00',color:'#2ECC71'},
+          ].map(tx=>`
+            <div style="display:flex;align-items:center;gap:12px;padding:14px;background:rgba(255,255,255,.02);border-radius:10px;border:1px solid rgba(255,255,255,.05);">
+              <div style="width:38px;height:38px;border-radius:50%;background:${tx.color}18;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <i class="${tx.icon}" style="color:${tx.color};font-size:.85rem;"></i>
+              </div>
+              <div style="flex:1;min-width:0;">
+                <div style="font-size:.85rem;font-weight:600;">${tx.desc}</div>
+                <div style="font-size:.7rem;color:rgba(255,255,255,.3);font-family:monospace;">${tx.hash} · ${tx.time}</div>
+              </div>
+              <div style="font-size:.88rem;font-weight:700;color:${tx.type==='mint'||tx.type==='stake'?'rgba(255,100,100,.8)':tx.color};white-space:nowrap;">${tx.amount}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== REWARDS TAB ===== -->
+    <div id="content-Rewards" style="display:none;">
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:20px;"><i class="fas fa-gift" style="color:#00D8FF;margin-right:8px;"></i>Claimable Rewards</h3>
+          <div style="text-align:center;padding:24px 0;">
+            <div style="font-size:2.5rem;font-weight:900;color:#00D8FF;">1,240</div>
+            <div style="font-size:.85rem;color:rgba(255,255,255,.4);">DAVINCI available</div>
+            <div style="font-size:.8rem;color:rgba(255,255,255,.3);margin-top:4px;">≈ $0.31 USD</div>
+          </div>
+          <button class="btn-primary" style="width:100%;justify-content:center;padding:14px;"><i class="fas fa-hand-holding-dollar"></i> Claim All Rewards</button>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:20px;"><i class="fas fa-users" style="color:#A86BFF;margin-right:8px;"></i>Referral Program</h3>
+          <div style="background:rgba(168,107,255,.08);border-radius:10px;padding:14px;margin-bottom:14px;">
+            <div style="font-size:.72rem;color:rgba(255,255,255,.4);margin-bottom:4px;">Your Referral Link</div>
+            <div style="font-size:.78rem;color:#A86BFF;font-family:monospace;">davinci.ai/ref/0xA1b2</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            ${[
+              {label:'Total Referrals',val:'14 users'},
+              {label:'Referral Earnings',val:'2,100 DAVINCI'},
+              {label:'Pending Rewards',val:'350 DAVINCI'},
+            ].map(r=>`
+              <div style="display:flex;justify-content:space-between;font-size:.85rem;">
+                <span style="color:rgba(255,255,255,.5);">${r.label}</span>
+                <span style="font-weight:700;color:#A86BFF;">${r.val}</span>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:24px;">
+          <h3 style="font-weight:700;font-size:.95rem;margin-bottom:20px;"><i class="fas fa-chart-bar" style="color:#00D8FF;margin-right:8px;"></i>Reward Breakdown</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            ${[
+              {label:'Creation Rewards',val:'8,400',pct:34,color:'#00D8FF'},
+              {label:'Staking Yields',val:'1,240',pct:5,color:'#A86BFF'},
+              {label:'Challenge Wins',val:'9,000',pct:37,color:'#F0B90B'},
+              {label:'Referral Bonuses',val:'2,100',pct:9,color:'#2ECC71'},
+              {label:'DAO Governance',val:'375',pct:2,color:'#3DCFFF'},
+              {label:'NFT Royalties',val:'3,385',pct:14,color:'#D4A0FF'},
+            ].map(r=>`
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:.8rem;margin-bottom:4px;">
+                  <span style="color:rgba(255,255,255,.6);">${r.label}</span>
+                  <span style="color:${r.color};font-weight:600;">${r.val} DAVINCI</span>
+                </div>
+                <div style="height:4px;background:rgba(255,255,255,.07);border-radius:2px;">
+                  <div style="height:100%;width:${r.pct}%;background:${r.color};border-radius:2px;"></div>
+                </div>
+              </div>
+            `).join('')}
+          </div>
         </div>
       </div>
     </div>
 
   </div>
-</section>
+</div>
 
 <script>
-// Load user data
-function loadProfile() {
-  const wallet = localStorage.getItem('dv_wallet');
-  const auth = localStorage.getItem('dv_auth');
-  const user = JSON.parse(localStorage.getItem('dv_user')||'{}');
-
-  if (wallet) {
-    const short = wallet.slice(0,6)+'...'+wallet.slice(-4);
-    document.getElementById('profileName').textContent = short;
-    document.getElementById('avatarLetter').textContent = wallet.slice(2,3).toUpperCase();
-    document.getElementById('walletAddr').textContent = wallet;
-    document.getElementById('authMethod').textContent = 'MetaMask · BNB Chain';
-    document.getElementById('connectBtn').style.display = 'none';
-  } else if (auth === 'google' && user.name) {
-    document.getElementById('profileName').textContent = user.name;
-    document.getElementById('avatarLetter').textContent = user.name[0].toUpperCase();
-    document.getElementById('walletAddr').textContent = user.email || '';
-    document.getElementById('authMethod').textContent = 'Google Account';
-    document.getElementById('connectBtn').style.display = 'none';
-  }
-
-  // Load history from localStorage
-  const history = JSON.parse(localStorage.getItem('dv_history')||'[]');
-  if (history.length > 0) {
-    const tbody = document.getElementById('historyTable');
-    tbody.innerHTML = history.map(h => \`
-      <tr style="border-bottom:1px solid rgba(255,255,255,.04);">
-        <td style="padding:12px 20px;"><span style="background:rgba(0,216,255,.1);border-radius:6px;padding:3px 10px;font-size:.72rem;color:#00D8FF;">\${h.type}</span></td>
-        <td style="padding:12px 20px;font-size:.82rem;color:rgba(255,255,255,.6);">\${h.prompt.slice(0,40)}...</td>
-        <td style="padding:12px 20px;font-size:.78rem;color:rgba(255,255,255,.4);">\${h.model}</td>
-        <td style="padding:12px 20px;font-size:.82rem;color:#FF6B6B;text-align:right;">-\${h.credits}</td>
-        <td style="padding:12px 20px;font-size:.75rem;color:rgba(255,255,255,.3);text-align:right;">\${h.date}</td>
-      </tr>
-    \`).join('');
-  }
-}
-
-function switchTab(tab) {
-  const tabs = ['gallery','history','staking','rewards','settings'];
-  tabs.forEach(t => {
-    const btn = document.getElementById('tab-'+t);
-    const panel = document.getElementById('panel-'+t);
-    const active = t === tab;
-    if(btn) { btn.style.background = active ? 'linear-gradient(135deg,#00D8FF,#A86BFF)' : 'transparent'; btn.style.color = active ? '#080C14' : 'rgba(255,255,255,.5)'; btn.style.fontWeight = active ? '700' : '500'; }
-    if(panel) panel.style.display = active ? 'block' : 'none';
+function switchTab(name) {
+  document.querySelectorAll('[id^="content-"]').forEach(el => el.style.display = 'none');
+  document.getElementById('content-' + name).style.display = 'block';
+  document.querySelectorAll('[id^="tab-"]').forEach(btn => {
+    btn.style.background = 'transparent';
+    btn.style.color = 'rgba(255,255,255,.4)';
   });
+  document.getElementById('tab-' + name).style.background = 'rgba(0,216,255,.12)';
+  document.getElementById('tab-' + name).style.color = '#00D8FF';
 }
-
-function copyReferral() {
-  const code = 'DAVINCI-' + Math.random().toString(36).substr(2,8).toUpperCase();
-  navigator.clipboard?.writeText('https://davinci.ai?ref='+code).then(() => alert('Referral link copied!'));
+function selectLock(btn, apy) {
+  document.querySelectorAll('#content-Staking button').forEach(b => {
+    b.style.borderColor = 'rgba(255,255,255,.1)';
+    b.style.background = 'transparent';
+    b.querySelector('.text-apy')?.style && (b.querySelectorAll('div')[0].style.color = 'rgba(255,255,255,.6)');
+  });
+  btn.style.borderColor = '#00D8FF';
+  btn.style.background = 'rgba(0,216,255,.12)';
+  document.getElementById('est-apy').textContent = apy;
+  const amount = parseFloat(document.querySelector('#content-Staking input').value) || 1000;
+  document.getElementById('est-reward').textContent = Math.round(amount * parseFloat(apy) / 100) + ' DAVINCI';
 }
-
-loadProfile();
 </script>
 `
 
-export const myPage = layout('My Page', mypageContent)
+export const myPage = layout('My Page | DaVinci AI', myContent)
