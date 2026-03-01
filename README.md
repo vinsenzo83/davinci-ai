@@ -5,6 +5,31 @@
 
 ---
 
+## 📋 Project Identity
+
+| 항목 | 내용 |
+|---|---|
+| **프로젝트명** | DaVinci AI |
+| **코드네임** | `davinci-ai` |
+| **버전** | v3.5.0 |
+| **소유자** | vinsenzo83 |
+| **생성일** | 2026-03-01 |
+| **최종 업데이트** | 2026-03-01 |
+| **GitHub Repo** | https://github.com/vinsenzo83/davinci-ai |
+| **Cloudflare 프로젝트** | davinci-ai |
+| **Cloudflare 계정** | vinsenzo83@gmail.com |
+
+---
+
+## 💾 Backup History
+
+| 버전 | 날짜 | 설명 | 다운로드 |
+|---|---|---|---|
+| v3.5.0 | 2026-03-01 | Production launch — davinciai.io 배포 완료 | [다운로드](https://www.genspark.ai/api/files/s/y2WAeSoC) |
+| v3.4.0 | 2026-03-01 | Final update before deploy — 팀/파트너/반응형 완성 | [다운로드](https://www.genspark.ai/api/files/s/slnJlRQC) |
+
+---
+
 ## 🌐 Live URLs
 
 | Environment | URL | Status |
@@ -281,4 +306,4 @@ npm run deploy
 
 ---
 
-*Last updated: 2026-03-01 | Version: 3.5.0 | Status: ✅ Production Live*
+*Last updated: 2026-03-01 | Version: 3.5.0 | Codename: davinci-ai | Owner: vinsenzo83 | Status: ✅ Production Live @ davinciai.io*
