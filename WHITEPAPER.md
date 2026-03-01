@@ -15,9 +15,10 @@
 7. [Tokenomics ($DAVINCI)](#7-tokenomics-davinci)
 8. [Vesting Schedule](#8-vesting-schedule)
 9. [DAO Governance](#9-dao-governance)
-10. [Roadmap 2025–2027](#10-roadmap-20252027)
+10. [Roadmap 2025–2028](#10-roadmap-20252028)
 11. [Team & Advisors](#11-team--advisors)
-12. [Legal Disclaimer](#12-legal-disclaimer)
+12. [Partners & Integrations](#12-partners--integrations)
+13. [Legal Disclaimer](#13-legal-disclaimer)
 
 ---
 
@@ -31,186 +32,141 @@ Operating on **BNB Chain**, DaVinci AI introduces the **$DAVINCI token** (BEP-20
 
 | Parameter | Value |
 |-----------|-------|
-| Token Name | DAVINCI |
-| Token Standard | BEP-20 (BNB Chain) |
-| Total Supply | 8,888,888,888 |
-| TGE Date | Q4 2025 |
-| Community Allocation | 45% (4,000,000,000 tokens) |
-| Vesting Period | 3–5 years |
-| Target Market | Global AI Creators & Web3 Users |
+| Token Name | $DAVINCI |
+| Blockchain | BNB Chain (BEP-20) |
+| Total Supply | 8,888,888,888 (fixed) |
+| Type | Utility + Governance |
+| TGE | Q4 2025 |
+| Vesting Period | Up to 5 years |
 
 ---
 
 ## 2. Introduction & Vision
 
-The convergence of Artificial Intelligence and blockchain technology represents one of the most profound shifts in human creative history. Machines can now collaborate with humans to produce art that transcends individual capability — and blockchain ensures that ownership of such art is inviolable, transparent, and permanent.
+### Project Identity
 
-### Our Vision
+**DaVinci AI** is named after Leonardo da Vinci — the timeless symbol of creativity and genius. DaVinci AI represents the fusion of artistic imagination and artificial intelligence, reinventing creation for the Web3 era. It is a place where technology becomes inspiration, and intelligence turns into creation.
 
-> To build a decentralized, AI-powered creative economy where **every artist owns their work**, every creation can be monetized, and the platform is governed by the community it serves.
+**Tone:** Elegant · Innovative · Visionary · Artistic
 
-### Core Principles
+**Type:** A Web3 creative intelligence platform combining:
+- AI-driven art and media generation
+- Gamified airdrop and reward systems
+- Blockchain-powered digital ownership through NFTs
 
-- **Decentralization First**: No single point of failure or control
-- **Creator Sovereignty**: Artists retain full IP rights to their work
-- **Community Governance**: $DAVINCI holders control the platform's future
-- **AI Accessibility**: World-class AI tools available to everyone
-- **Blockchain Permanence**: Every creation anchored on-chain forever
+> *"DaVinci AI connects the soul of art with the mind of AI."*
+
+### Vision
+
+To become the world's leading AI-powered creative economy on the BNB Chain — empowering a global community to create, earn, and own digital art.
+
+### Philosophy
+
+| Pillar | Meaning |
+|--------|---------|
+| **Human × AI** | Emotion inspires, intelligence refines |
+| **Play × Earn** | Interaction becomes creation |
+| **Create × Own** | Every masterpiece belongs to its creator — secured on-chain forever |
+
+### Slogans
+
+| Slogan | Meaning |
+|--------|---------|
+| "Where Art Thinks." | DaVinci AI breathes intelligence into art — creativity that learns and evolves |
+| "Create. Play. Prosper." | Highlights user participation and rewards |
+| "Intelligence Meets Imagination." | The balance between data-driven AI and human creativity |
+| "From Vision to Reality." | Creative ideas transformed into real digital assets through blockchain |
 
 ---
 
 ## 3. The Problem We Solve
 
-The current AI art landscape suffers from three fundamental structural flaws:
+The creative economy faces three critical barriers in the Web3 era:
 
-### 3.1 Centralization Risk
+1. **Fragmented Tools**: Creators must juggle multiple AI platforms (image, video, voice, code) with no unified interface, losing time and creative momentum.
+2. **Ownership Opacity**: AI-generated content lacks verifiable provenance. Creators cannot prove originality, leading to IP disputes and lost royalties.
+3. **No Creator Economy Layer**: Traditional AI platforms extract value from creators without sharing revenue. There is no mechanism to reward creative contribution with ownership.
 
-Major AI art platforms (Midjourney, DALL-E) operate on centralized servers. A single policy change, shutdown, or ban can erase years of creative work and economic value.
-
-### 3.2 Creator Exploitation
-
-Platforms profit from creator-generated training data while artists receive minimal compensation. According to a 2024 market analysis, the global AI art market is projected to reach **$8.5 billion by 2028**, yet less than **3% of that value** is returned to individual creators.
-
-### 3.3 Ownership Opacity
-
-AI-generated works exist in a legal and technical gray zone. Provenance, attribution, and ownership rights are unclear, making monetization unreliable and legally ambiguous.
+DaVinci AI solves all three with a single, integrated, blockchain-native platform.
 
 ---
 
 ## 4. The DaVinci AI Solution
 
-DaVinci AI introduces a **four-layer solution architecture**:
+DaVinci AI is built on three pillars:
 
-### Layer 1: Decentralized AI Model Access
+### 4.1 Unified AI Agent Platform
+15+ specialized AI agents — each purpose-built for art, video, music, writing, code, and Web3. All accessible from one interface, powered by state-of-the-art models.
 
-API aggregation layer connects to Midjourney, DALL-E 3, Stable Diffusion XL, KlingAI, HeyGen, Wrtn.AI, and Nouvo.AI through a unified interface. Smart routing selects optimal models based on prompt type, cost, and performance.
+### 4.2 Blockchain-Verified Ownership
+Every AI generation is cryptographically signed, timestamped, and anchored to BNB Chain. NFT minting creates immutable proof of creation, ownership history, and creator attribution.
 
-### Layer 2: On-Chain Provenance & Ownership
-
-Every AI generation is cryptographically signed, timestamped, and anchored to BNB Chain. NFT minting creates immutable proof of creation, ownership history, and creator attribution via BEP-721 and BEP-1155 standards.
-
-### Layer 3: Creator Economy
-
-$DAVINCI token enables direct creator monetization:
-- Platform rewards for generation quality
-- NFT marketplace royalties (5–10%)
-- Staking yields
-- Referral bonuses
-- DAO participation incentives
-
-### Layer 4: Community Governance
-
-DaVinci DAO uses quadratic voting to prevent plutocracy. $DAVINCI holders propose and vote on platform upgrades, treasury allocations, AI model additions, fee structures, and partnership decisions.
+### 4.3 Token-Incentivized Creator Economy
+$DAVINCI tokens reward every creative action — generation, curation, staking, governance participation, and community growth.
 
 ---
 
 ## 5. Platform Ecosystem
 
-### 5.1 DaVinci Game Hub
+### 🎮 1. DaVinci Game Hub
 
-A competitive creative arena where AI art meets blockchain gaming. Features include:
-- Real-time AI art battles (PvP prompt challenges)
-- Community voting on winners via DAO
-- Seasonal leaderboards with $DAVINCI prize pools
-- Genesis NFT badges for top performers
-- Play-to-Earn mechanics with transparent reward distribution
-- Guilds and team-based creation competitions
+Gamified Telegram & WebApp experience where users:
+- Earn Creative Credits (CC) through daily missions & art-based challenges
+- Climb artistic ranks: Apprentice → Virtuoso → Master
+- Participate in brand-sponsored creative quests
 
-### 5.2 AI Atelier
+### 🧠 2. AI Atelier (Agent Studio)
 
-DaVinci AI's flagship creative studio providing access to:
-- Multi-model parallel generation (compare outputs)
-- Style presets and community-shared prompt libraries
-- Batch generation with variation controls
-- High-resolution upscaling (up to 4K)
-- Inpainting and outpainting tools
-- Style transfer between user NFTs
-- Collaborative creation with real-time multiplayer canvas
+An integrated suite of 15+ AI agents powered by BNB infrastructure:
 
-**Supported AI Models:**
-- Midjourney v6 (image generation)
-- DALL-E 3 by OpenAI (image generation)
-- Stable Diffusion XL (open-source generation)
-- KlingAI v2 (video generation)
-- HeyGen v3 (avatar animation)
-- Nouvo.AI Pro (creative effects)
-- Wrtn.AI (creative writing + visuals)
+| Agent | Category | Model | Status |
+|-------|----------|-------|--------|
+| Visio | Art & Design | SDXL + ControlNet | Live |
+| Prism | Art & Design | StyleGAN3 + CLIP | Live |
+| Kinetic | Video & Motion | KlingAI v2 | Live |
+| Avatar | Video & Motion | HeyGen v3 | Beta |
+| Chronicle | Writing & Story | GPT-4o | Live |
+| Sonic | Music & Audio | MusicGen + Suno v4 | Live |
+| Forge | Code & Dev | CodeLlama + GPT-4 | Live |
+| Genesis | NFT & Web3 | Visio + Genesis Engine | Live |
+| Sculptor | 3D & XR | Shap-E + Point-E | Beta |
 
-### 5.3 NFT Renaissance Marketplace
+### 💎 3. NFT Renaissance
 
-Purpose-built marketplace for AI-generated art. Every listing carries full AI provenance metadata:
-- Instant BEP-20 NFT minting (BEP-721 and BEP-1155)
-- AI model attribution on every NFT
-- Creator royalty enforcement (5–10% perpetual)
-- Curated collections and artist spotlights
-- Auction, fixed price, and offers mechanisms
-- Bundle listings for collections
-- Secondary market analytics dashboard
+- Mint AI-generated artworks into BNB-based NFTs (BEP-721 / BEP-1155)
+- Trade on marketplaces: Element, NFTKey, OpenSea (BNB version)
+- Participate in Masterpiece Auctions and special drops
 
-### 5.4 DaVinci Rewards System
+### 🪙 4. Rewards & Recognition
 
-Distributes **45% of total token supply** (4 billion $DAVINCI) to community participants over 36 months:
-
-| Reward Type | Description |
-|-------------|-------------|
-| Creation Rewards | Generate AI art → earn tokens |
-| Quality Bonuses | Community upvotes → earn multipliers |
-| Curation Rewards | Discover trending works early → earn |
-| Staking Yields | Lock $DAVINCI → earn APY (8%–48%) |
-| Referral Program | Bring creators → earn % of their earnings |
-| DAO Governance | Vote on proposals → earn participation rewards |
+- Earn $DAVINCI tokens through play, creation, and community participation
+- Gain DAO voting rights and creator privileges by staking
 
 ---
 
 ## 6. Technology Architecture
 
-### 6.1 System Stack
+| Layer | Description |
+|-------|-------------|
+| Frontend | Telegram Mini-App + Web Dashboard |
+| AI Layer | Stable Diffusion · Midjourney · KlingAI · HeyGen · Wrtn.AI · Nouvo.AI |
+| Backend | Node.js + PostgreSQL + IPFS for media storage |
+| Blockchain Layer | BNB Chain (BEP-20, BEP-721) Smart Contracts |
+| Security | Multi-sig wallets · Anti-bot systems · Audit by CertiK or PeckShield |
 
-```
-┌─────────────────────────────────────────┐
-│           FRONTEND LAYER                │
-│  React/Next.js · TailwindCSS · Web3.js  │
-├─────────────────────────────────────────┤
-│            API GATEWAY                  │
-│  Hono · Cloudflare Workers · REST/WS    │
-├──────────────┬──────────────────────────┤
-│  AI ENGINE   │    BLOCKCHAIN LAYER      │
-│  Midjourney  │  BNB Chain (BEP-20/721)  │
-│  DALL-E 3   │  Smart Contracts          │
-│  Stable Diff │  IPFS/Filecoin Storage   │
-│  KlingAI    │  The Graph Indexing       │
-├──────────────┴──────────────────────────┤
-│           DATA LAYER                    │
-│  D1 SQLite · KV Storage · R2 Objects    │
-└─────────────────────────────────────────┘
-```
+### 6.1 AI Model Integration
 
-### 6.2 Smart Contract Architecture
+API aggregation layer connects to Midjourney, DALL-E 3, Stable Diffusion XL, KlingAI, HeyGen, Wrtn.AI, and Nouvo.AI through a unified interface. Smart routing selects optimal models based on prompt type, cost, and performance.
 
-| Contract | Standard | Purpose |
-|----------|----------|---------|
-| DAVINCI Token | BEP-20 | Utility & governance token |
-| DaVinci NFT | BEP-721 | Unique artwork ownership |
-| DaVinci Edition | BEP-1155 | Multi-edition collections |
-| Staking | Custom | Yield distribution |
-| DAO Governor | Governor Bravo | Governance proposals |
-| Timelock | Standard | 48-hour execution delay |
-| Treasury MultiSig | Gnosis Safe | 5-of-9 treasury control |
+### 6.2 Blockchain Layer
 
-### 6.3 Security Measures
-
-- ✅ Third-party smart contract audit (pre-TGE)
-- ✅ Bug bounty program ($500K pool)
-- ✅ Cold storage for 80% of treasury
-- ✅ Rate limiting & DDoS protection
-- 🔬 Zero-knowledge proof integration (R&D phase)
-- ✅ Formal verification of core contracts
+Every AI generation is cryptographically signed, timestamped, and anchored to BNB Chain. NFT minting creates immutable proof of creation, ownership history, and creator attribution via BEP-721 and BEP-1155 standards.
 
 ---
 
 ## 7. Tokenomics ($DAVINCI)
 
-### 7.1 Token Overview
+### 7.1 Token Parameters
 
 | Parameter | Value |
 |-----------|-------|
@@ -224,23 +180,23 @@ Distributes **45% of total token supply** (4 billion $DAVINCI) to community part
 
 ### 7.2 Token Allocation
 
-| Category | Allocation | Amount | Purpose |
-|----------|-----------|--------|---------|
-| Community Rewards | 45% | 4,000,000,000 | Creator rewards, staking, governance |
-| Investors | 15% | 1,333,333,333 | Seed, private, public rounds |
-| Ecosystem Growth | 13% | 1,155,555,556 | Partnerships, integrations, marketing |
-| Team & Advisors | 12% | 1,066,666,667 | Core team and advisory compensation |
-| Treasury | 10% | 888,888,889 | DAO-controlled operational fund |
-| Artist Fund | 5% | 444,444,444 | Artist grants and residency program |
-| **TOTAL** | **100%** | **8,888,888,889** | |
+| Category | Allocation | Total Tokens | Purpose |
+|----------|-----------|--------------|---------|
+| 🧩 Community Rewards | 45% | 4,000,000,000 | Game & creation rewards |
+| 👨‍💻 Team & Core Dev | 12% | 1,066,666,666 | Long-term development |
+| 🌐 Ecosystem & Marketing | 13% | 1,155,555,555 | Partnerships & integrations |
+| 💼 Strategic Investors | 15% | 1,333,333,333 | Strategic + private rounds |
+| 🏛 Treasury & Foundation | 10% | 888,888,888 | Ecosystem reserve |
+| 🎨 Artist Fund | 5% | 444,444,444 | Creator grants & sponsorships |
+| **TOTAL** | **100%** | **8,888,888,888** | |
 
 ### 7.3 Token Utility
 
-1. **AI Generation Credits**: Consume $DAVINCI for premium model access
+1. **AI Generation Credits**: Convert Creative Credits (CC) from mini-games into $DAVINCI; unlock premium AI models and generation tiers
 2. **Staking & Yield**: Lock tokens for platform fee revenue share (8%–48% APY)
-3. **Governance Rights**: 1 $DAVINCI = 1 vote in DaVinci DAO
-4. **Burn Mechanism**: 2% of all NFT marketplace transactions burned permanently
-5. **NFT Marketplace Fees**: 50% discount when paying in $DAVINCI vs. BNB
+3. **Governance Rights**: 1 $DAVINCI = 1 vote in DaVinci DAO; participate in art curation and platform proposals
+4. **NFT Marketplace**: Purchase NFTs, exclusive assets, and booster packs; 50% fee discount when paying in $DAVINCI
+5. **Burn Mechanism**: 2% of all NFT marketplace transactions burned permanently (deflationary)
 6. **Creator Rewards**: 45% distributed as creation and curation rewards
 
 ### 7.4 Value Accrual Mechanism
@@ -258,27 +214,69 @@ As DaVinci AI grows:
 
 All insider allocations are subject to strict vesting schedules to ensure long-term commitment and prevent market manipulation at launch.
 
-| Allocation | % | TGE Unlock | Cliff | Vesting Duration |
-|------------|---|-----------|-------|------------------|
-| Community Rewards | 45% | 10% | None | 36 months linear |
-| Investors | 15% | 5% | 12 months | 24 months linear |
-| Ecosystem Growth | 13% | 8% | 6 months | 30 months linear |
-| Team & Advisors | 12% | 0% | 18 months | 36 months linear |
-| Treasury | 10% | 5% | 6 months | 48 months linear |
-| Artist Fund | 5% | 10% | 3 months | 24 months linear |
+### 8.1 Allocation & Vesting Overview
 
-### Key Vesting Principles
+| Category | Allocation (%) | Total Tokens | TGE Unlock | Cliff | Vesting Period |
+|----------|---------------|--------------|-----------|-------|----------------|
+| 🧩 Community Rewards | 45% | 4,000,000,000 | 5% → 200,000,000 | 3 months | 60 months (5 years) linear |
+| 👨‍💻 Team & Core Dev | 12% | 1,066,666,666 | 0% → 0 | 18 months | 48 months (4 years) linear |
+| 🌐 Ecosystem & Marketing | 13% | 1,155,555,555 | 8% → 92,444,444 | 6 months | 42 months (3.5 years) linear |
+| 💼 Strategic Investors | 15% | 1,333,333,333 | 10% → 133,333,333 | 9 months | 36 months (3 years) linear |
+| 🏛 Treasury & Foundation | 10% | 888,888,888 | 0% → 0 | 12 months | 60 months (5 years) linear |
+| 🎨 Artist Fund | 5% | 444,444,444 | 10% → 44,444,444 | 0 months | 36 months (3 years) linear |
+| **Total Supply** | **100%** | **8,888,888,888** | — | — | — |
+
+### 8.2 Key Vesting Principles
 
 - **Zero Team TGE Unlock**: Team tokens have 18-month cliff — no immediate sell pressure
-- **Community-First**: Largest allocation (45%) unlocks progressively over 3 years
-- **Investor Accountability**: 12-month cliff ensures investor commitment post-TGE
-- **Treasury Protection**: 48-month vesting ensures sustainable long-term operations
+- **Zero Treasury TGE Unlock**: Treasury locked for 12 months to ensure long-term stability
+- **Community-First**: Largest allocation (45%) unlocks progressively over 5 years
+- **Investor Accountability**: 9-month cliff ensures investor commitment post-TGE
+- **Treasury Protection**: 60-month vesting ensures sustainable long-term operations
+- **Artist Incentive**: Artist Fund unlocks immediately at TGE (10%) to fund early creator activity
+
+### 8.3 Monthly Vesting Schedule (Cumulative Circulating Supply)
+
+| Month | Community Rewards | Ecosystem & Marketing | Investors | Team & Dev | Treasury | Artist Fund | Total Circulating | Circulating % |
+|-------|------------------|-----------------------|-----------|------------|----------|-------------|-------------------|---------------|
+| 1 | 200,000,000 | 92,444,444 | 133,333,333 | 0 | 0 | 44,444,444 | 470,222,221 | 5.29% |
+| 2 | 266,666,667 | 92,444,444 | 133,333,333 | 0 | 0 | 66,666,667 | 559,111,111 | 6.29% |
+| 3 | 333,333,333 | 92,444,444 | 133,333,333 | 0 | 0 | 88,888,889 | 648,000,000 | 7.29% |
+| 4 | 400,000,000 | 115,555,556 | 133,333,333 | 0 | 0 | 111,111,111 | 760,000,000 | 8.55% |
+| 5 | 466,666,667 | 115,555,556 | 133,333,333 | 0 | 0 | 133,333,333 | 848,888,889 | 9.55% |
+| 6 | 533,333,333 | 115,555,556 | 133,333,333 | 0 | 0 | 155,555,556 | 937,777,778 | 10.56% |
+| 7 | 600,000,000 | 138,666,667 | 177,777,778 | 0 | 0 | 177,777,778 | 1,094,222,223 | 12.31% |
+| 8 | 666,666,667 | 138,666,667 | 222,222,222 | 0 | 0 | 200,000,000 | 1,227,555,556 | 13.80% |
+| 9 | 733,333,333 | 138,666,667 | 266,666,667 | 0 | 0 | 222,222,222 | 1,360,888,889 | 15.30% |
+| 10 | 800,000,000 | 161,777,778 | 311,111,111 | 0 | 0 | 244,444,444 | 1,517,333,333 | 17.07% |
+| 11 | 866,666,667 | 161,777,778 | 355,555,556 | 0 | 0 | 266,666,667 | 1,650,666,668 | 18.56% |
+| 12 | 933,333,333 | 161,777,778 | 400,000,000 | 0 | 0 | 288,888,889 | 1,784,000,000 | 20.07% |
+| 13 | 1,000,000,000 | 184,888,889 | 444,444,444 | 0 | 88,888,889 | 311,111,111 | 2,028,333,333 | 22.81% |
+| 14 | 1,066,666,667 | 184,888,889 | 488,888,889 | 0 | 88,888,889 | 333,333,333 | 2,162,666,667 | 24.32% |
+| 15 | 1,133,333,333 | 184,888,889 | 533,333,333 | 0 | 88,888,889 | 355,555,556 | 2,296,000,000 | 25.83% |
+| 16 | 1,200,000,000 | 208,000,000 | 577,777,778 | 0 | 88,888,889 | 377,777,778 | 2,452,444,445 | 27.60% |
+| 17 | 1,266,666,667 | 208,000,000 | 622,222,222 | 0 | 88,888,889 | 400,000,000 | 2,585,777,778 | 29.09% |
+| 18 | 1,333,333,333 | 208,000,000 | 666,666,667 | 88,888,889 | 88,888,889 | 422,222,222 | 2,808,000,000 | 31.60% |
+| 19 | 1,400,000,000 | 231,111,111 | 711,111,111 | 111,111,111 | 88,888,889 | 422,222,222 | 2,964,444,444 | 33.36% |
+| 20 | 1,466,666,667 | 231,111,111 | 755,555,556 | 133,333,333 | 88,888,889 | 422,222,222 | 3,097,777,778 | 34.85% |
+| 21 | 1,533,333,333 | 231,111,111 | 800,000,000 | 155,555,556 | 88,888,889 | 422,222,222 | 3,231,111,111 | 36.35% |
+| 22 | 1,600,000,000 | 254,222,222 | 844,444,444 | 177,777,778 | 88,888,889 | 422,222,222 | 3,387,555,555 | 38.12% |
+| 23 | 1,666,666,667 | 254,222,222 | 888,888,889 | 200,000,000 | 88,888,889 | 422,222,222 | 3,520,888,889 | 39.61% |
+| 24 | 1,733,333,333 | 254,222,222 | 933,333,333 | 222,222,222 | 88,888,889 | 422,222,222 | 3,654,222,222 | 41.11% |
+| 30 | 2,133,333,333 | 346,666,667 | 1,066,666,667 | 333,333,333 | 177,777,778 | 422,222,222 | 4,479,999,999 | 50.40% |
+| 36 | 2,533,333,333 | 439,111,111 | 1,200,000,000 | 444,444,444 | 266,666,667 | 444,444,444 | 5,327,999,999 | 59.93% |
+| 42 | 3,133,333,333 | 507,111,111 | 1,288,888,889 | 666,666,667 | 355,555,556 | 444,444,444 | 6,395,999,999 | 71.96% |
+| 48 | 3,733,333,333 | 575,111,111 | 1,333,333,333 | 888,888,889 | 444,444,444 | 444,444,444 | 7,419,555,554 | 83.51% |
+| 54 | 3,866,666,667 | 632,222,222 | 1,333,333,333 | 1,022,222,222 | 622,222,222 | 444,444,444 | 7,920,000,000 | 89.12% |
+| 60 | 4,000,000,000 | 692,444,444 | 1,333,333,333 | 1,066,666,666 | 888,888,888 | 444,444,444 | 8,888,888,888 | 100% |
+
+> **Full unlock at Month 60 (5 years)** — 100% of supply in circulation
 
 ---
 
 ## 9. DAO Governance
 
-DaVinci DAO is designed for genuine community ownership. Launching **Q2 2026**, the DAO controls the platform treasury, major feature decisions, and long-term protocol upgrades.
+DaVinci DAO is designed for genuine community ownership. Launching **Q3 2026**, the DAO controls the platform treasury, major feature decisions, and long-term protocol upgrades.
 
 ### 9.1 Governance Structure
 
@@ -302,86 +300,71 @@ DaVinci DAO is designed for genuine community ownership. Launching **Q2 2026**, 
 
 - Earn $DAVINCI for voting participation
 - Bonus rewards for quality proposal submission
-- Delegate reward share system
-- DAO reputation scores
-- Governance achievement NFT badges
+- Reputation score system for consistent contributors
 
 ---
 
-## 10. Roadmap 2025–2027
+## 10. Roadmap 2025–2028
 
-### Phase 1 — Q1–Q2 2025 ✅ COMPLETED
-- [x] Project reveal & whitepaper v1.0
-- [x] Community bootstrapping on X and Telegram
-- [x] AI model API integrations (Midjourney, DALL-E 3, Stable Diffusion)
-- [x] Core smart contract development
-- [x] Team expansion (10+ members)
-- [x] Seed round ($500K target)
-
-### Phase 2 — Q3–Q4 2025 🔄 IN PROGRESS
-- [ ] AI Atelier beta launch (invite-only)
-- [ ] DaVinci Game Hub soft launch
-- [ ] NFT minting engine v1 live
-- [ ] Smart contract audits complete
-- [ ] $DAVINCI TGE on BNB Chain
-- [ ] PancakeSwap listing
-- [ ] Whitepaper v2.0 published ✅
-
-### Phase 3 — Q1–Q2 2026
-- [ ] NFT Marketplace v1 public launch
-- [ ] DAO governance activation
-- [ ] Staking pools & yield farming
-- [ ] KlingAI & HeyGen video integration
-- [ ] Mobile app beta (iOS/Android)
-- [ ] Series A fundraise ($3M target)
-- [ ] 10,000+ community members
-
-### Phase 4 — Q3–Q4 2026
-- [ ] Ethereum & Polygon bridge
-- [ ] AI Model Marketplace launch
-- [ ] Layer 2 gas optimization
-- [ ] Creator royalty automation
-- [ ] 100,000+ users milestone
-- [ ] Enterprise API program
-
-### Phase 5 — 2027+
-- [ ] DaVinci L2 research & development
-- [ ] Decentralized AI training nodes
-- [ ] Cross-chain NFT portability (10+ chains)
-- [ ] AI DAO autonomous governance
-- [ ] Global artist residency fund
-- [ ] 1,000,000+ creators onboarded
+| Phase | Timeline | Key Milestones |
+|-------|----------|----------------|
+| **Phase 1** | Q1 2025 | Project reveal · Website + Telegram alpha · AI Image Studio alpha |
+| **Phase 2** | Q2 2025 | Community expansion · Mini-game beta · Airdrop Season 1 · Social & referral missions |
+| **Phase 3** | Q3 2025 | AI Agent Studio build · AI Video Lab beta · NFT minting · Artist Fund setup |
+| **Phase 4** | Q4 2025 🚀 | **$DAVINCI TGE** · DEX & CEX listing on BNB Chain · DAO Preview |
+| **Phase 5** | Q1 2026 | NFT Marketplace v1 launch · Brand galleries · DAO beta testing |
+| **Phase 6** | Q2 2026 | 3D/Voice Studio · Mobile App (iOS & Android) |
+| **Phase 7** | Q3 2026 | Airdrop Season 2 · Major partnerships · Community DAO activation |
+| **Phase 8** | Q4 2026 | Full DAO governance · Treasury staking & reward programs |
+| **Phase 9** | 2027–2028 | Multi-chain integration (ETH, TON, Arbitrum) · Artist Grant Fund Launch |
 
 ---
 
 ## 11. Team & Advisors
 
 | Name | Role | Background |
-|------|------|-----------|
-| Leonardo Chen | CEO & Co-Founder | Ex-DeepMind AI Research Lead. 10+ years generative AI. Blockchain architect since 2017. |
-| Aria Nakamoto | CTO & Co-Founder | Ethereum core contributor. 5 DeFi protocols deployed. Smart contract security specialist. |
-| Marcus Rivera | Chief Creative Officer | Award-winning digital artist. NFT sales totaling $2.4M. Collaborates with Beeple and Pak. |
-| Yuki Tanaka | Head of Partnerships | Ex-Binance NFT partnerships. Connected with 50+ VCs and 200+ Web3 projects globally. |
-| Dr. Sarah Kim | Head of AI Research | PhD Computer Vision (MIT). Published 12 papers on generative models. Former Google Brain. |
-| Alex Petrov | Head of Blockchain | Solidity expert. Audited $500M+ in DeFi TVL. Core contributor to OpenZeppelin security framework. |
+|------|------|------------|
+| **Daniel** | Chief Executive Officer (CEO) | Aurora Dynamics Ltd. |
+| **Ethan Lee** | Chief Technology Officer (CTO) | NovaVerse Labs |
+| **Mika Tanaka** | Chief Marketing Officer (CMO) | Lunaris Interactive |
 
 ---
 
-## 12. Legal Disclaimer
+## 12. Partners & Integrations
 
-This whitepaper is for informational purposes only and does not constitute financial, investment, or legal advice. The $DAVINCI token is a utility token designed for use within the DaVinci AI platform ecosystem.
+| Partner | Role |
+|---------|------|
+| 🤖 [OpenAI](https://openai.com/) | Foundational model reference (DALL-E 3, GPT-4) |
+| 🎨 [Midjourney](https://www.midjourney.com/) | Visual rendering AI |
+| 🎬 [KlingAI](https://app.klingai.com/) | Motion & video synthesis |
+| 🗣️ [HeyGen](https://www.heygen.com/) | Voice & avatar creation |
+| ✍️ [Wrtn.AI](https://wrtn.ai/) | Creative prompt optimization |
+| 🧩 [Nouvo.AI](https://www.nouvo.ai/) | Compositional enhancement |
+| 🦾 BNB Chain Ecosystem | DEXs (PancakeSwap), NFT markets, wallets |
 
-**$DAVINCI tokens are NOT:**
-- Securities or investment contracts
-- Financial instruments regulated by any authority
-- Shares, bonds, or equity in DaVinci AI Ltd.
+### Community
+
+- **X (Twitter)**: [https://x.com/DaVinciAiZ](https://x.com/DaVinciAiZ)
+- **Telegram**: [https://t.me/DaVinciAiZ](https://t.me/DaVinciAiZ)
+
+---
+
+## 13. Legal Disclaimer
+
+$DAVINCI is a BEP-20 utility token designed to provide access to DaVinci AI's creative tools and governance system. It is **not a financial instrument or investment contract**.
+
+All smart contracts will undergo independent audits (CertiK / PeckShield) before mainnet launch. Users are responsible for complying with relevant digital asset regulations.
+
+**This whitepaper is for informational purposes only and does not constitute financial, investment, or legal advice.**
+
+- Not securities or investment contracts
+- Not guaranteed to increase in value
+- Subject to regulatory changes in various jurisdictions
 
 **Cryptocurrency investments are highly volatile and speculative.** Past performance is not indicative of future results. Participants should conduct their own due diligence and consult qualified financial and legal advisors before participating in any token sale or purchase.
 
-DaVinci AI reserves the right to update this whitepaper at any time. The most current version will always be available at **[github.com/vinsenzo83/davinci-ai](https://github.com/vinsenzo83/davinci-ai)**.
-
 ---
 
-*DaVinci AI — Where Art Thinks. Intelligence Meets Imagination.*  
-*Whitepaper v2.0 | March 2025 | BNB Chain*
+*DaVinci AI Whitepaper v2.0 — Last Updated: 2025*
 
+*"Where Art Thinks. Intelligence Meets Imagination."*

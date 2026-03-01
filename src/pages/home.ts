@@ -395,10 +395,10 @@ const homeContent = `
         <div style="display:flex;flex-direction:column;gap:12px;">
           ${[
             { label:'Community Rewards', pct:45, val:'4,000,000,000', color:'#00D8FF' },
-            { label:'Investors', pct:15, val:'1,333,333,333', color:'#A86BFF' },
-            { label:'Ecosystem Growth', pct:13, val:'1,155,555,556', color:'#3DCFFF' },
-            { label:'Team & Advisors', pct:12, val:'1,066,666,667', color:'#7B5FBF' },
-            { label:'Treasury', pct:10, val:'888,888,889', color:'#00A8CC' },
+            { label:'Strategic Investors', pct:15, val:'1,333,333,333', color:'#A86BFF' },
+            { label:'Ecosystem & Marketing', pct:13, val:'1,155,555,555', color:'#3DCFFF' },
+            { label:'Team & Core Dev', pct:12, val:'1,066,666,666', color:'#7B5FBF' },
+            { label:'Treasury & Foundation', pct:10, val:'888,888,888', color:'#00A8CC' },
             { label:'Artist Fund', pct:5, val:'444,444,444', color:'#D4A0FF' },
           ].map(a=>`
             <div>
@@ -442,12 +442,12 @@ const homeContent = `
           </thead>
           <tbody>
             ${[
-              { name:'Community Rewards', pct:'45%', tge:'10%', cliff:'None', vest:'36 months', color:'#00D8FF' },
-              { name:'Investors', pct:'15%', tge:'5%', cliff:'12 months', vest:'24 months', color:'#A86BFF' },
-              { name:'Ecosystem Growth', pct:'13%', tge:'8%', cliff:'6 months', vest:'30 months', color:'#3DCFFF' },
-              { name:'Team & Advisors', pct:'12%', tge:'0%', cliff:'18 months', vest:'36 months', color:'#7B5FBF' },
-              { name:'Treasury', pct:'10%', tge:'5%', cliff:'6 months', vest:'48 months', color:'#00A8CC' },
-              { name:'Artist Fund', pct:'5%', tge:'10%', cliff:'3 months', vest:'24 months', color:'#D4A0FF' },
+              { name:'Community Rewards', pct:'45%', tge:'5%', cliff:'3 months', vest:'60 months (5 years)', color:'#00D8FF' },
+              { name:'Strategic Investors', pct:'15%', tge:'10%', cliff:'9 months', vest:'36 months (3 years)', color:'#A86BFF' },
+              { name:'Ecosystem & Marketing', pct:'13%', tge:'8%', cliff:'6 months', vest:'42 months (3.5 years)', color:'#3DCFFF' },
+              { name:'Team & Core Dev', pct:'12%', tge:'0%', cliff:'18 months', vest:'48 months (4 years)', color:'#7B5FBF' },
+              { name:'Treasury & Foundation', pct:'10%', tge:'0%', cliff:'12 months', vest:'60 months (5 years)', color:'#00A8CC' },
+              { name:'Artist Fund', pct:'5%', tge:'10%', cliff:'0 months', vest:'36 months (3 years)', color:'#D4A0FF' },
             ].map((r,i)=>`
               <tr style="border-bottom:1px solid rgba(255,255,255,.05);${i%2===0?'background:rgba(255,255,255,.01)':''}">
                 <td style="padding:14px 16px;"><span style="display:inline-flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:${r.color};display:inline-block;"></span>${r.name}</span></td>
@@ -459,6 +459,56 @@ const homeContent = `
             `).join('')}
           </tbody>
         </table>
+      </div>
+
+      <!-- Monthly Vesting Schedule Table -->
+      <div class="fade-up" style="margin-top:48px;">
+        <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:8px;">Monthly Cumulative Circulating Supply</h3>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.4);margin-bottom:20px;">Full unlock at Month 60 (5 years) — 100% of supply in circulation</p>
+        <div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(255,255,255,.07);">
+          <table style="width:100%;border-collapse:collapse;font-size:.78rem;min-width:720px;">
+            <thead style="background:rgba(0,216,255,.06);">
+              <tr>
+                <th style="padding:10px 12px;text-align:center;color:rgba(255,255,255,.5);font-weight:700;white-space:nowrap;">Month</th>
+                <th style="padding:10px 12px;text-align:right;color:#00D8FF;font-weight:700;white-space:nowrap;">Community</th>
+                <th style="padding:10px 12px;text-align:right;color:#3DCFFF;font-weight:700;white-space:nowrap;">Ecosystem</th>
+                <th style="padding:10px 12px;text-align:right;color:#A86BFF;font-weight:700;white-space:nowrap;">Investors</th>
+                <th style="padding:10px 12px;text-align:right;color:#7B5FBF;font-weight:700;white-space:nowrap;">Team</th>
+                <th style="padding:10px 12px;text-align:right;color:#00A8CC;font-weight:700;white-space:nowrap;">Treasury</th>
+                <th style="padding:10px 12px;text-align:right;color:#D4A0FF;font-weight:700;white-space:nowrap;">Artist Fund</th>
+                <th style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.7);font-weight:700;white-space:nowrap;">Total Circ.</th>
+                <th style="padding:10px 12px;text-align:center;color:rgba(255,255,255,.7);font-weight:700;white-space:nowrap;">Circ. %</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${[
+                { m:1,  c:'200,000,000',   e:'92,444,444',   i:'133,333,333', t:'0',             tr:'0',           a:'44,444,444',   tot:'470,222,221',   pct:'5.29%'  },
+                { m:3,  c:'333,333,333',   e:'92,444,444',   i:'133,333,333', t:'0',             tr:'0',           a:'88,888,889',   tot:'648,000,000',   pct:'7.29%'  },
+                { m:6,  c:'533,333,333',   e:'115,555,556',  i:'133,333,333', t:'0',             tr:'0',           a:'155,555,556',  tot:'937,777,778',   pct:'10.56%' },
+                { m:9,  c:'733,333,333',   e:'138,666,667',  i:'266,666,667', t:'0',             tr:'0',           a:'222,222,222',  tot:'1,360,888,889', pct:'15.30%' },
+                { m:12, c:'933,333,333',   e:'161,777,778',  i:'400,000,000', t:'0',             tr:'0',           a:'288,888,889',  tot:'1,784,000,000', pct:'20.07%' },
+                { m:18, c:'1,333,333,333', e:'208,000,000',  i:'666,666,667', t:'88,888,889',    tr:'88,888,889',  a:'422,222,222',  tot:'2,808,000,000', pct:'31.60%' },
+                { m:24, c:'1,733,333,333', e:'254,222,222',  i:'933,333,333', t:'222,222,222',   tr:'88,888,889',  a:'422,222,222',  tot:'3,654,222,222', pct:'41.11%' },
+                { m:30, c:'2,133,333,333', e:'346,666,667',  i:'1,066,666,667',t:'333,333,333',  tr:'177,777,778', a:'422,222,222',  tot:'4,479,999,999', pct:'50.40%' },
+                { m:36, c:'2,533,333,333', e:'439,111,111',  i:'1,200,000,000',t:'444,444,444',  tr:'266,666,667', a:'444,444,444',  tot:'5,327,999,999', pct:'59.93%' },
+                { m:48, c:'3,733,333,333', e:'575,111,111',  i:'1,333,333,333',t:'888,888,889',  tr:'444,444,444', a:'444,444,444',  tot:'7,419,555,554', pct:'83.51%' },
+                { m:60, c:'4,000,000,000', e:'692,444,444',  i:'1,333,333,333',t:'1,066,666,666',tr:'888,888,888', a:'444,444,444',  tot:'8,888,888,888', pct:'100%'   },
+              ].map((r,i)=>`
+                <tr style="border-bottom:1px solid rgba(255,255,255,.05);${r.m===60?'background:rgba(0,216,255,.05);font-weight:700;':i%2===0?'background:rgba(255,255,255,.01)':''}">
+                  <td style="padding:10px 12px;text-align:center;font-weight:600;color:${r.m===60?'#00D8FF':'rgba(255,255,255,.7)'};">${r.m===60?'60 ✓':''+r.m}</td>
+                  <td style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.75);">${r.c}</td>
+                  <td style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.75);">${r.e}</td>
+                  <td style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.75);">${r.i}</td>
+                  <td style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.75);">${r.t}</td>
+                  <td style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.75);">${r.tr}</td>
+                  <td style="padding:10px 12px;text-align:right;color:rgba(255,255,255,.75);">${r.a}</td>
+                  <td style="padding:10px 12px;text-align:right;font-weight:600;">${r.tot}</td>
+                  <td style="padding:10px 12px;text-align:center;font-weight:700;color:${r.m===60?'#00D8FF':'rgba(255,255,255,.6)'};">${r.pct}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -603,7 +653,7 @@ const homeContent = `
       ${[
         { q:'What are AI Agents on DaVinci AI?', a:'AI Agents are specialized AI models purpose-built for specific creative tasks. Visio handles text-to-image art, Kinetic creates cinematic videos, Sonic composes music, Forge generates smart contracts — each optimized for peak performance in its domain. All accessible from one platform.' },
         { q:'What is $DAVINCI token and how can I earn it?', a:'$DAVINCI is a BEP-20 utility and governance token on BNB Chain with 8,888,888,888 total supply. Earn by using AI agents, winning Game Hub battles, NFT marketplace activities, staking, referring users, and DAO governance participation.' },
-        { q:'When is the Token Generation Event (TGE)?', a:'The TGE is scheduled for Q4 2025. 45% of total supply is allocated to community rewards with 10% TGE unlock and 36-month linear vesting. Early community members receive priority access.' },
+        { q:'When is the Token Generation Event (TGE)?', a:'The TGE is scheduled for Q4 2025. 45% of total supply is allocated to community rewards with 5% TGE unlock (3-month cliff), then 60-month linear vesting over 5 years. Strategic Investors receive 10% at TGE with a 9-month cliff and 36-month linear vesting. Early community members receive priority access.' },
         { q:'Do I need crypto experience to use DaVinci AI?', a:'No! Start creating with just a Google login. A crypto wallet (MetaMask) is only needed when you want to mint NFTs or claim $DAVINCI tokens.' },
         { q:'How many AI agents are available?', a:'Currently ${platformStats.liveAgents} live agents and ${platformStats.totalAgents} total (including beta and upcoming). Categories include Art & Design, Video & Motion, Writing, Music & Audio, Code & Dev, NFT & Web3, Analytics, and 3D & XR. New agents launch monthly via community governance votes.' },
         { q:'How does NFT minting work?', a:'After any AI agent generation, mint it as a BEP-20 NFT on BNB Chain with one click. The minting fee is paid in BNB. Your creation becomes a verifiable on-chain asset with full provenance history and you retain full IP rights.' },
@@ -727,7 +777,7 @@ window.addEventListener('load',()=>{
     new Chart(ctx,{
       type:'doughnut',
       data:{
-        labels:['Community Rewards','Investors','Ecosystem Growth','Team','Treasury','Artist Fund'],
+        labels:['Community Rewards','Strategic Investors','Ecosystem & Marketing','Team & Core Dev','Treasury & Foundation','Artist Fund'],
         datasets:[{
           data:[45,15,13,12,10,5],
           backgroundColor:['#00D8FF','#A86BFF','#3DCFFF','#7B5FBF','#00A8CC','#D4A0FF'],
@@ -747,10 +797,10 @@ window.addEventListener('load',()=>{
       data:{
         labels:months.map(m=>m===0?'TGE':m%12===0?'Month '+m:''),
         datasets:[
-          {label:'Community (45%)',data:months.map(m=>Math.min(10+(m/36)*90,100)),borderColor:'#00D8FF',backgroundColor:'rgba(0,216,255,.08)',fill:true,tension:.4,pointRadius:0},
-          {label:'Investors (15%)',data:months.map(m=>m<12?5:Math.min(5+((m-12)/24)*95,100)),borderColor:'#A86BFF',backgroundColor:'rgba(168,107,255,.06)',fill:true,tension:.4,pointRadius:0},
-          {label:'Team (12%)',data:months.map(m=>m<18?0:Math.min(((m-18)/36)*100,100)),borderColor:'#7B5FBF',backgroundColor:'rgba(123,95,191,.05)',fill:true,tension:.4,pointRadius:0},
-          {label:'Ecosystem (13%)',data:months.map(m=>m<6?8:Math.min(8+((m-6)/30)*92,100)),borderColor:'#3DCFFF',backgroundColor:'rgba(61,207,255,.05)',fill:true,tension:.4,pointRadius:0},
+          {label:'Community (45%)',data:months.map(m=>m<3?5:Math.min(5+((m-3)/60)*95,100)),borderColor:'#00D8FF',backgroundColor:'rgba(0,216,255,.08)',fill:true,tension:.4,pointRadius:0},
+          {label:'Investors (15%)',data:months.map(m=>m<9?10:Math.min(10+((m-9)/36)*90,100)),borderColor:'#A86BFF',backgroundColor:'rgba(168,107,255,.06)',fill:true,tension:.4,pointRadius:0},
+          {label:'Team (12%)',data:months.map(m=>m<18?0:Math.min(((m-18)/48)*100,100)),borderColor:'#7B5FBF',backgroundColor:'rgba(123,95,191,.05)',fill:true,tension:.4,pointRadius:0},
+          {label:'Ecosystem (13%)',data:months.map(m=>m<6?8:Math.min(8+((m-6)/42)*92,100)),borderColor:'#3DCFFF',backgroundColor:'rgba(61,207,255,.05)',fill:true,tension:.4,pointRadius:0},
         ]
       },
       options:{

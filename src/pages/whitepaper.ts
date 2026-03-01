@@ -307,13 +307,13 @@ const wpContent = `
                 </thead>
                 <tbody>
                   ${[
-                    { name:'Community Rewards', amount:'4,000,000,000', pct:'45%', tge:'10%', cliff:'None', vest:'36 mo linear', color:'#00D8FF' },
-                    { name:'Investors', amount:'1,333,333,333', pct:'15%', tge:'5%', cliff:'12 months', vest:'24 mo linear', color:'#A86BFF' },
-                    { name:'Ecosystem Growth', amount:'1,155,555,556', pct:'13%', tge:'8%', cliff:'6 months', vest:'30 mo linear', color:'#3DCFFF' },
-                    { name:'Team & Advisors', amount:'1,066,666,667', pct:'12%', tge:'0%', cliff:'18 months', vest:'36 mo linear', color:'#7B5FBF' },
-                    { name:'Treasury', amount:'888,888,889', pct:'10%', tge:'5%', cliff:'6 months', vest:'48 mo linear', color:'#00A8CC' },
-                    { name:'Artist Fund', amount:'444,444,444', pct:'5%', tge:'10%', cliff:'3 months', vest:'24 mo linear', color:'#D4A0FF' },
-                    { name:'TOTAL', amount:'8,888,888,889', pct:'100%', tge:'—', cliff:'—', vest:'—', color:'#FDFDFD' },
+                    { name:'Community Rewards', amount:'4,000,000,000', pct:'45%', tge:'5%', cliff:'3 months', vest:'60 mo (5 years)', color:'#00D8FF' },
+                    { name:'Strategic Investors', amount:'1,333,333,333', pct:'15%', tge:'10%', cliff:'9 months', vest:'36 mo (3 years)', color:'#A86BFF' },
+                    { name:'Ecosystem & Marketing', amount:'1,155,555,555', pct:'13%', tge:'8%', cliff:'6 months', vest:'42 mo (3.5 years)', color:'#3DCFFF' },
+                    { name:'Team & Core Dev', amount:'1,066,666,666', pct:'12%', tge:'0%', cliff:'18 months', vest:'48 mo (4 years)', color:'#7B5FBF' },
+                    { name:'Treasury & Foundation', amount:'888,888,888', pct:'10%', tge:'0%', cliff:'12 months', vest:'60 mo (5 years)', color:'#00A8CC' },
+                    { name:'Artist Fund', amount:'444,444,444', pct:'5%', tge:'10%', cliff:'0 months', vest:'36 mo (3 years)', color:'#D4A0FF' },
+                    { name:'TOTAL', amount:'8,888,888,888', pct:'100%', tge:'—', cliff:'—', vest:'—', color:'#FDFDFD' },
                   ].map((r,i)=>`
                     <tr style="border-bottom:1px solid rgba(255,255,255,.05);${r.name==='TOTAL'?'background:rgba(0,216,255,.06);font-weight:700;':''}">
                       <td style="padding:12px 16px;display:flex;align-items:center;gap:8px;"><span style="width:8px;height:8px;border-radius:50%;background:${r.color};display:inline-block;"></span>${r.name}</td>
@@ -327,10 +327,79 @@ const wpContent = `
                 </tbody>
               </table>
             </div>
+
+            <!-- Key Vesting Principles -->
+            <div style="background:rgba(168,107,255,.06);border:1px solid rgba(168,107,255,.2);border-radius:14px;padding:20px;">
+              <h4 style="font-weight:700;font-size:.95rem;color:#A86BFF;margin-bottom:14px;">Key Vesting Principles</h4>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;">
+                ${[
+                  ['Zero Team TGE Unlock','Team tokens have 18-month cliff — no immediate sell pressure'],
+                  ['Zero Treasury TGE Unlock','Treasury locked for 12 months to ensure long-term stability'],
+                  ['Community-First','Largest allocation (45%) unlocks progressively over 5 years'],
+                  ['Investor Accountability','9-month cliff ensures investor commitment post-TGE'],
+                  ['Treasury Protection','60-month vesting ensures sustainable long-term operations'],
+                  ['Artist Incentive','Artist Fund unlocks 10% immediately at TGE to fund early creator activity'],
+                ].map(([title,desc])=>`
+                  <li style="font-size:.85rem;color:rgba(255,255,255,.7);display:flex;gap:10px;">
+                    <i class="fas fa-check-circle" style="color:#A86BFF;flex-shrink:0;margin-top:2px;"></i>
+                    <span><strong style="color:#fff;">${title}</strong>: ${desc}</span>
+                  </li>
+                `).join('')}
+              </ul>
+            </div>
+
+            <!-- Monthly Vesting Schedule Table -->
+            <div>
+              <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;margin-bottom:6px;">Monthly Cumulative Circulating Supply</h3>
+              <p style="font-size:.8rem;color:rgba(255,255,255,.4);margin-bottom:14px;">Full unlock at Month 60 (5 years) — 8,888,888,888 tokens (100%)</p>
+              <div style="overflow-x:auto;border-radius:12px;border:1px solid rgba(255,255,255,.07);">
+                <table style="width:100%;border-collapse:collapse;font-size:.76rem;min-width:750px;">
+                  <thead style="background:rgba(0,216,255,.06);">
+                    <tr>
+                      <th style="padding:9px 10px;text-align:center;color:rgba(255,255,255,.5);font-weight:700;">Month</th>
+                      <th style="padding:9px 10px;text-align:right;color:#00D8FF;font-weight:700;">Community</th>
+                      <th style="padding:9px 10px;text-align:right;color:#3DCFFF;font-weight:700;">Ecosystem</th>
+                      <th style="padding:9px 10px;text-align:right;color:#A86BFF;font-weight:700;">Investors</th>
+                      <th style="padding:9px 10px;text-align:right;color:#7B5FBF;font-weight:700;">Team</th>
+                      <th style="padding:9px 10px;text-align:right;color:#00A8CC;font-weight:700;">Treasury</th>
+                      <th style="padding:9px 10px;text-align:right;color:#D4A0FF;font-weight:700;">Artist Fund</th>
+                      <th style="padding:9px 10px;text-align:right;color:rgba(255,255,255,.7);font-weight:700;">Total Circ.</th>
+                      <th style="padding:9px 10px;text-align:center;color:rgba(255,255,255,.7);font-weight:700;">%</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    ${[
+                      { m:1,  c:'200,000,000',   e:'92,444,444',   i:'133,333,333',   t:'0',             tr:'0',           a:'44,444,444',  tot:'470,222,221',   pct:'5.29%'  },
+                      { m:3,  c:'333,333,333',   e:'92,444,444',   i:'133,333,333',   t:'0',             tr:'0',           a:'88,888,889',  tot:'648,000,000',   pct:'7.29%'  },
+                      { m:6,  c:'533,333,333',   e:'115,555,556',  i:'133,333,333',   t:'0',             tr:'0',           a:'155,555,556', tot:'937,777,778',   pct:'10.56%' },
+                      { m:9,  c:'733,333,333',   e:'138,666,667',  i:'266,666,667',   t:'0',             tr:'0',           a:'222,222,222', tot:'1,360,888,889', pct:'15.30%' },
+                      { m:12, c:'933,333,333',   e:'161,777,778',  i:'400,000,000',   t:'0',             tr:'0',           a:'288,888,889', tot:'1,784,000,000', pct:'20.07%' },
+                      { m:18, c:'1,333,333,333', e:'208,000,000',  i:'666,666,667',   t:'88,888,889',    tr:'88,888,889',  a:'422,222,222', tot:'2,808,000,000', pct:'31.60%' },
+                      { m:24, c:'1,733,333,333', e:'254,222,222',  i:'933,333,333',   t:'222,222,222',   tr:'88,888,889',  a:'422,222,222', tot:'3,654,222,222', pct:'41.11%' },
+                      { m:30, c:'2,133,333,333', e:'346,666,667',  i:'1,066,666,667', t:'333,333,333',   tr:'177,777,778', a:'422,222,222', tot:'4,479,999,999', pct:'50.40%' },
+                      { m:36, c:'2,533,333,333', e:'439,111,111',  i:'1,200,000,000', t:'444,444,444',   tr:'266,666,667', a:'444,444,444', tot:'5,327,999,999', pct:'59.93%' },
+                      { m:48, c:'3,733,333,333', e:'575,111,111',  i:'1,333,333,333', t:'888,888,889',   tr:'444,444,444', a:'444,444,444', tot:'7,419,555,554', pct:'83.51%' },
+                      { m:54, c:'3,866,666,667', e:'632,222,222',  i:'1,333,333,333', t:'1,022,222,222', tr:'622,222,222', a:'444,444,444', tot:'7,920,000,000', pct:'89.12%' },
+                      { m:60, c:'4,000,000,000', e:'692,444,444',  i:'1,333,333,333', t:'1,066,666,666', tr:'888,888,888', a:'444,444,444', tot:'8,888,888,888', pct:'100%'   },
+                    ].map((r,i)=>`
+                      <tr style="border-bottom:1px solid rgba(255,255,255,.05);${r.m===60?'background:rgba(0,216,255,.05);font-weight:700;':i%2===0?'background:rgba(255,255,255,.01)':''}">
+                        <td style="padding:9px 10px;text-align:center;font-weight:600;color:${r.m===60?'#00D8FF':'rgba(255,255,255,.7)'};">${r.m===60?'60 ✓':''+r.m}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;color:rgba(255,255,255,.7);">${r.c}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;color:rgba(255,255,255,.7);">${r.e}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;color:rgba(255,255,255,.7);">${r.i}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;color:rgba(255,255,255,.7);">${r.t}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;color:rgba(255,255,255,.7);">${r.tr}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;color:rgba(255,255,255,.7);">${r.a}</td>
+                        <td style="padding:9px 10px;text-align:right;font-family:monospace;font-weight:600;">${r.tot}</td>
+                        <td style="padding:9px 10px;text-align:center;font-weight:700;color:${r.m===60?'#00D8FF':'rgba(255,255,255,.6)'};">${r.pct}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </section>
-
-        <!-- 9. DAO Governance -->
         <section id="governance">
           <div style="border-left:3px solid #00D8FF;padding-left:20px;margin-bottom:24px;">
             <p style="font-size:.72rem;color:#00D8FF;font-weight:700;letter-spacing:.1em;margin-bottom:6px;">SECTION 09</p>
@@ -437,11 +506,11 @@ window.addEventListener('load', ()=>{
   const ctx = document.getElementById('wpVestingChart')?.getContext('2d');
   if(!ctx) return;
   const months = [...Array(61).keys()];
-  const community = months.map(m => m===0?10:Math.min(10+(m/36)*90,100));
-  const investors = months.map(m => m<12?5:Math.min(5+((m-12)/24)*95,100));
-  const team = months.map(m => m<18?0:Math.min(((m-18)/36)*100,100));
-  const ecosystem = months.map(m => m<6?8:Math.min(8+((m-6)/30)*92,100));
-  const treasury = months.map(m => m<6?5:Math.min(5+((m-6)/48)*95,100));
+  const community = months.map(m => m<3?5:Math.min(5+((m-3)/60)*95,100));
+  const investors = months.map(m => m<9?10:Math.min(10+((m-9)/36)*90,100));
+  const team = months.map(m => m<18?0:Math.min(((m-18)/48)*100,100));
+  const ecosystem = months.map(m => m<6?8:Math.min(8+((m-6)/42)*92,100));
+  const treasury = months.map(m => m<12?0:Math.min(((m-12)/60)*100,100));
   new Chart(ctx,{
     type:'line',
     data:{
