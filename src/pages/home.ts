@@ -606,34 +606,118 @@ const homeContent = `
 </section>
 
 <!-- ===== PARTNERS ===== -->
-<section id="partners" style="padding:clamp(60px,8vw,100px) 0;background:#05080F;position:relative;">
-  <div class="max-w-7xl mx-auto px-section">
-    <div class="text-center fade-up" style="margin-bottom:60px;">
+<section id="partners" style="padding:clamp(60px,8vw,100px) 0;background:#05080F;position:relative;overflow:hidden;">
+  <div class="orb" style="width:500px;height:500px;background:rgba(0,216,255,.03);top:-150px;right:-150px;"></div>
+  <div class="max-w-7xl mx-auto px-section" style="position:relative;z-index:1;">
+    <div class="text-center fade-up" style="margin-bottom:56px;">
       <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.15em;margin-bottom:12px;">POWERED BY</p>
       <h2 style="font-family:'Poppins',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,3rem);margin-bottom:16px;">
         World-Class <span class="gradient-text">AI & Web3 Partners</span>
       </h2>
       <div class="section-divider"></div>
+      <p style="font-size:.92rem;color:rgba(255,255,255,.4);margin-top:20px;max-width:540px;margin-left:auto;margin-right:auto;">
+        Integrated with the world's leading AI models and Web3 infrastructure providers.
+      </p>
     </div>
 
-    <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4 partner-grid">
-      ${[
-        { name:'OpenAI', icon:'fas fa-robot', color:'#10a37f', desc:'DALL-E 3' },
-        { name:'Midjourney', icon:'fas fa-wand-magic-sparkles', color:'#9B59B6', desc:'v6 API' },
-        { name:'KlingAI', icon:'fas fa-video', color:'#E74C3C', desc:'Video Gen' },
-        { name:'HeyGen', icon:'fas fa-film', color:'#3498DB', desc:'Avatar AI' },
-        { name:'Wrtn.AI', icon:'fas fa-pen-nib', color:'#2ECC71', desc:'Creative AI' },
-        { name:'Suno', icon:'fas fa-music', color:'#FA709A', desc:'Music Gen' },
-        { name:'BNB Chain', icon:'fas fa-link', color:'#F0B90B', desc:'Infrastructure' },
-      ].map(p=>`
-        <div class="card-glass fade-up" style="padding:20px;text-align:center;cursor:pointer;" onmouseover="this.style.borderColor='rgba(0,216,255,.3)';this.style.transform='translateY(-3px)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)'">
-          <div style="width:48px;height:48px;border-radius:12px;background:${p.color}18;border:1px solid ${p.color}33;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
-            <i class="${p.icon}" style="font-size:1.2rem;color:${p.color};"></i>
+    <!-- Category: AI Models -->
+    <div style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+        <span style="font-size:.72rem;color:#00D8FF;font-weight:700;letter-spacing:.12em;background:rgba(0,216,255,.08);border:1px solid rgba(0,216,255,.2);padding:5px 14px;border-radius:50px;">AI MODELS</span>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.06);"></div>
+      </div>
+      <div class="partner-grid">
+        ${[
+          { name:'OpenAI',       icon:'fas fa-brain',               color:'#10a37f', desc:'GPT-4o · DALL-E 3',    badge:'Image · Text' },
+          { name:'Midjourney',   icon:'fas fa-wand-magic-sparkles',  color:'#9B59B6', desc:'v6 API',              badge:'Image Gen' },
+          { name:'Stable Diff.', icon:'fas fa-image',                color:'#FF6B35', desc:'SDXL · SD3',          badge:'Image Gen' },
+          { name:'Runway ML',    icon:'fas fa-film',                  color:'#E74C3C', desc:'Gen-3 Alpha',         badge:'Video Gen' },
+          { name:'KlingAI',      icon:'fas fa-video',                 color:'#C0392B', desc:'v1.6 Pro',            badge:'Video Gen' },
+          { name:'HeyGen',       icon:'fas fa-user-tie',              color:'#3498DB', desc:'Avatar AI v2',        badge:'Avatar AI' },
+          { name:'Suno',         icon:'fas fa-music',                 color:'#FA709A', desc:'v4 API',              badge:'Music Gen' },
+          { name:'ElevenLabs',   icon:'fas fa-microphone',            color:'#F39C12', desc:'Voice AI',            badge:'Voice Gen' },
+        ].map(p=>`
+          <div class="card-glass fade-up partner-card" style="padding:20px 16px;text-align:center;cursor:pointer;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='${p.color}44';this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,.03)'">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${p.color};opacity:.5;"></div>
+            <div style="width:52px;height:52px;border-radius:14px;background:${p.color}18;border:1px solid ${p.color}33;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+              <i class="${p.icon}" style="font-size:1.3rem;color:${p.color};"></i>
+            </div>
+            <div style="font-size:.88rem;font-weight:700;margin-bottom:3px;">${p.name}</div>
+            <div style="font-size:.68rem;color:rgba(255,255,255,.35);margin-bottom:8px;">${p.desc}</div>
+            <span style="font-size:.62rem;padding:2px 8px;border-radius:50px;background:${p.color}15;color:${p.color};border:1px solid ${p.color}30;font-weight:600;">${p.badge}</span>
           </div>
-          <div style="font-size:.85rem;font-weight:700;">${p.name}</div>
-          <div style="font-size:.7rem;color:rgba(255,255,255,.35);margin-top:3px;">${p.desc}</div>
-        </div>
-      `).join('')}
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Category: Web3 & Infrastructure -->
+    <div style="margin-bottom:48px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+        <span style="font-size:.72rem;color:#A86BFF;font-weight:700;letter-spacing:.12em;background:rgba(168,107,255,.08);border:1px solid rgba(168,107,255,.2);padding:5px 14px;border-radius:50px;">WEB3 & INFRASTRUCTURE</span>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.06);"></div>
+      </div>
+      <div class="partner-grid">
+        ${[
+          { name:'BNB Chain',    icon:'fas fa-link',                  color:'#F0B90B', desc:'Primary Chain',       badge:'L1 Chain' },
+          { name:'PancakeSwap',  icon:'fas fa-cookie-bite',            color:'#1FC7D4', desc:'DEX Listing',         badge:'DEX' },
+          { name:'OpenSea',      icon:'fas fa-water',                  color:'#2081E2', desc:'NFT Marketplace',     badge:'NFT Market' },
+          { name:'Chainlink',    icon:'fas fa-network-wired',          color:'#375BD2', desc:'Price Oracle',        badge:'Oracle' },
+          { name:'IPFS',         icon:'fas fa-database',               color:'#65C2CB', desc:'Decentralized Store', badge:'Storage' },
+          { name:'MetaMask',     icon:'fas fa-wallet',                 color:'#E88B1A', desc:'Wallet Connect',      badge:'Wallet' },
+          { name:'WalletConnect',icon:'fas fa-qrcode',                 color:'#3B99FC', desc:'Multi-wallet',        badge:'Wallet' },
+          { name:'Etherscan',    icon:'fas fa-search',                 color:'#21325B', desc:'Block Explorer',      badge:'Explorer' },
+        ].map(p=>`
+          <div class="card-glass fade-up partner-card" style="padding:20px 16px;text-align:center;cursor:pointer;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='${p.color}44';this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,.03)'">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${p.color};opacity:.5;"></div>
+            <div style="width:52px;height:52px;border-radius:14px;background:${p.color}18;border:1px solid ${p.color}33;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+              <i class="${p.icon}" style="font-size:1.3rem;color:${p.color};"></i>
+            </div>
+            <div style="font-size:.88rem;font-weight:700;margin-bottom:3px;">${p.name}</div>
+            <div style="font-size:.68rem;color:rgba(255,255,255,.35);margin-bottom:8px;">${p.desc}</div>
+            <span style="font-size:.62rem;padding:2px 8px;border-radius:50px;background:${p.color}15;color:${p.color};border:1px solid ${p.color}30;font-weight:600;">${p.badge}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Category: Creative Tools -->
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+        <span style="font-size:.72rem;color:#3DCFFF;font-weight:700;letter-spacing:.12em;background:rgba(61,207,255,.08);border:1px solid rgba(61,207,255,.2);padding:5px 14px;border-radius:50px;">CREATIVE TOOLS</span>
+        <div style="flex:1;height:1px;background:rgba(255,255,255,.06);"></div>
+      </div>
+      <div class="partner-grid">
+        ${[
+          { name:'Wrtn.AI',      icon:'fas fa-pen-nib',               color:'#2ECC71', desc:'Creative AI',         badge:'Writing' },
+          { name:'Replicate',    icon:'fas fa-server',                 color:'#6366F1', desc:'Model API',           badge:'ML Infra' },
+          { name:'Hugging Face', icon:'fas fa-smile',                  color:'#FFD21E', desc:'Open Models',         badge:'AI Hub' },
+          { name:'Anthropic',    icon:'fas fa-a',                      color:'#D4A374', desc:'Claude API',          badge:'LLM' },
+          { name:'LangChain',    icon:'fas fa-link',                   color:'#22C55E', desc:'Agent Framework',     badge:'AI Agent' },
+          { name:'Pinecone',     icon:'fas fa-bolt',                   color:'#00C4B4', desc:'Vector DB',           badge:'Database' },
+          { name:'AWS',          icon:'fab fa-aws',                    color:'#FF9900', desc:'Cloud Infra',         badge:'Cloud' },
+          { name:'Cloudflare',   icon:'fas fa-shield-halved',          color:'#F6821F', desc:'Edge Network',        badge:'CDN' },
+        ].map(p=>`
+          <div class="card-glass fade-up partner-card" style="padding:20px 16px;text-align:center;cursor:pointer;position:relative;overflow:hidden;" onmouseover="this.style.borderColor='${p.color}44';this.style.transform='translateY(-4px)';this.style.background='rgba(255,255,255,.04)'" onmouseout="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='translateY(0)';this.style.background='rgba(255,255,255,.03)'">
+            <div style="position:absolute;top:0;left:0;right:0;height:2px;background:${p.color};opacity:.5;"></div>
+            <div style="width:52px;height:52px;border-radius:14px;background:${p.color}18;border:1px solid ${p.color}33;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;">
+              <i class="${p.icon}" style="font-size:1.3rem;color:${p.color};"></i>
+            </div>
+            <div style="font-size:.88rem;font-weight:700;margin-bottom:3px;">${p.name}</div>
+            <div style="font-size:.68rem;color:rgba(255,255,255,.35);margin-bottom:8px;">${p.desc}</div>
+            <span style="font-size:.62rem;padding:2px 8px;border-radius:50px;background:${p.color}15;color:${p.color};border:1px solid ${p.color}30;font-weight:600;">${p.badge}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <!-- Partner CTA -->
+    <div class="text-center fade-up" style="margin-top:56px;padding:40px;background:rgba(0,216,255,.03);border:1px solid rgba(0,216,255,.1);border-radius:20px;">
+      <p style="font-size:.78rem;color:#00D8FF;font-weight:700;letter-spacing:.12em;margin-bottom:12px;">BECOME A PARTNER</p>
+      <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.5rem;margin-bottom:12px;">Want to integrate with <span class="gradient-text">DaVinci AI</span>?</h3>
+      <p style="font-size:.9rem;color:rgba(255,255,255,.45);max-width:480px;margin:0 auto 24px;">We're actively partnering with AI models, Web3 protocols, and creative tools. Let's build the future of AI-native creativity together.</p>
+      <a href="https://x.com/DaVinciAiZ" target="_blank" class="btn-primary" style="font-size:.95rem;padding:13px 32px;">
+        <i class="fas fa-handshake"></i> Partner With Us
+      </a>
     </div>
   </div>
 </section>
@@ -918,9 +1002,11 @@ export const homePage = layout('Home — DaVinci AI: AI Agent Creative Platform'
   @media(max-width:399px){ .team-inner-grid { grid-template-columns:1fr; } }
 
   /* ===== PARTNERS ===== */
-  .partner-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:16px; }
-  @media(max-width:1023px){ .partner-grid { grid-template-columns:repeat(4,1fr); } }
-  @media(max-width:479px){ .partner-grid { grid-template-columns:repeat(3,1fr); gap:10px; } }
+  .partner-grid { display:grid; grid-template-columns:repeat(8,1fr); gap:14px; }
+  @media(max-width:1199px){ .partner-grid { grid-template-columns:repeat(4,1fr); } }
+  @media(max-width:639px)  { .partner-grid { grid-template-columns:repeat(3,1fr); gap:10px; } }
+  @media(max-width:399px)  { .partner-grid { grid-template-columns:repeat(2,1fr); } }
+  .partner-card { transition:transform .25s, border-color .25s, background .25s !important; }
 
   /* ===== CTA ===== */
   .cta-btn-wrap { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; }
